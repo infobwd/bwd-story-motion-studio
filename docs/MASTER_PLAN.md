@@ -1,9 +1,9 @@
-# BWD Story Motion Studio — Master Plan v1.0
-วันที่: 22 พฤศจิกายน 2569 | สถานะ: Manual pilot uploaded / Technical QA pass; Production Automation not built
+# BWD Story Motion Studio — Master Plan v1.1
+วันที่: 22 พฤศจิกายน 2569 | สถานะ: Pilot v1 NeedsRevision / scene-image drafts 6/6 uploaded / production automation not built
 Project: **BWD Story Motion Studio — AI Video Production**
 Repository: https://github.com/infobwd/bwd-story-motion-studio
 
-> โครงการมีคลิปนำร่องแบบผลิตเฉพาะกิจและอัปโหลด Drive ผ่านแล้ว แต่ยังไม่มีระบบผลิตวิดีโออัตโนมัติหรือ QA โดยผู้ตรวจรับ
+> คลิปนำร่อง v1 อัปโหลด Drive แล้วแต่ผู้ใช้ให้ข้อเสนอแนะว่าเสียงและภาพไม่ผ่าน; ภาพร่าง 6 ฉากชุดใหม่อยู่ใน Drive รออนุมัติ ยังไม่มี production worker/queue
 
 ## 1. วิสัยทัศน์
 พัฒนาระบบผลิตคลิปสั้นเชิงเล่าเรื่อง (character-led motion graphics) จากบทใน Google Sheets โดยแบ่งเรื่องเป็นฉากอย่างเป็นระบบ ควบคุมตัวละครประจำ สร้าง/ประสานเสียงพากย์และคำบรรยาย ตรวจคุณภาพก่อนเผยแพร่ จัดเก็บ MP4 ที่ Google Drive และบริหารการผลิตผ่าน GitHub Pages ที่เชื่อม Supabase ผู้ใช้สามารถสั่งงาน/ตรวจสถานะผ่าน ChatGPT ได้ตามสิทธิ์ของเครื่องมือที่เชื่อมต่อ
@@ -94,3 +94,11 @@ Draft → StoryboardReady → ScriptApproved → Queued → Claimed → AssetsRe
 - MP4 Drive: https://drive.google.com/file/d/15bLE8DvnoV17hmL1Z7AYDFWAU950cOVN/view?usp=drivesdk
 - **ยังไม่มี Supabase queue หรือ deployed worker**; ตัวอย่างทดสอบนี้ไม่ผ่านระบบคิวอัตโนมัติ; human QA ยังไม่ผ่าน ห้ามระบุว่าส่งมอบเป็นงานเผยแพร่แล้ว
 - รายละเอียดหลักฐาน/QA: [PILOT_TEST_LOG_20261122.md](PILOT_TEST_LOG_20261122.md); config: [drive-storage.json](../config/drive-storage.json)
+
+## 13. Image-first visual production gate — update 2026-11-22
+- User reported Pilot v1 voice and scene visual quality unacceptable. **Do not reuse it as final**; classify as NeedsRevision (technical file validation remains PASS).
+- Replace quick render-first flow for this project with: Script → Scene images 6 draft → **Human visual QA** → Enhanced English narration draft → **Voice QA** → Motion composition/MP4 v2 → Final QA → Drive upload/verification.
+- Draft folder (6 uploaded PNGs): https://drive.google.com/drive/folders/1Des_VC-5FYDMLPXcN9tRESIQRRBX8b_k
+- Google Sheet `Scenes!H1:M7` holds real Drive image ID, URL, draft status and voice status; `Story` tab records next approval gate.
+- More details: [Visual Style Guide](VISUAL_STYLE_GUIDE.md), [Voice Guide](VOICE_GUIDE.md), [Visual QA Log](QA_VISUAL_ASSETS_20261122.md), [Image Manifest](../assets/STORY-EN-001_visual_draft_manifest_v1.json).
+- All scene-image drafts **unapproved**; no v2 render started. Supabase and API-based worker integration remain NOT IMPLEMENTED.
