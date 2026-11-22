@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "story_id": "STORY-EN-001",
+  "visual_revision": "v1",
+  "status": "image_approved",
+  "confirmed": "2026-11-22",
+  "approval_source": "User statement in project chat: ภาพโอเคแล้ว",
+  "approval_scope": "Six illustrated scene stills only; not voice, subtitle timing, lip sync, or final MP4",
+  "approved_folder_url": "https://drive.google.com/drive/folders/18nLmhtYKEAmYiwmSr19PCE4ESM8uo7dJ",
+  "approved_folder_id": "18nLmhtYKEAmYiwmSr19PCE4ESM8uo7dJ",
+  "source_manifest": "assets/STORY-EN-001_visual_draft_manifest_v1.json",
+  "scenes": [
+    {
+      "scene_id": "STORY-EN-001-S01",
+      "approved_drive_file_id": "15tkX4CyTdAOlmk2f-HM4afQrgxVjhlEH",
+      "approved_drive_url": "https://drive.google.com/file/d/15tkX4CyTdAOlmk2f-HM4afQrgxVjhlEH/view",
+      "source_draft_drive_file_id": "1jb_TtLdkYNOfP0OGfN1ThOo4jtml8fMM",
+      "status": "ImageApproved"
+    },
+    {
+      "scene_id": "STORY-EN-001-S02",
+      "approved_drive_file_id": "1NA1uaWthCdBQyRoCEWSyfnDGf3Ex8nsf",
+      "approved_drive_url": "https://drive.google.com/file/d/1NA1uaWthCdBQyRoCEWSyfnDGf3Ex8nsf/view",
+      "source_draft_drive_file_id": "1LePzBogCDDP0Yg-0fM73hHgCrWbnPVcD",
+      "status": "ImageApproved"
+    },
+    {
+      "scene_id": "STORY-EN-001-S03",
+      "approved_drive_file_id": "1TNEmvRQdxIRp9D51Fcr8tDRam53GGve8",
+      "approved_drive_url": "https://drive.google.com/file/d/1TNEmvRQdxIRp9D51Fcr8tDRam53GGve8/view",
+      "source_draft_drive_file_id": "1mdDNN5jwlwH68FASfcFBO9Zu9ab8A5NL",
+      "status": "ImageApproved"
+    },
+    {
+      "scene_id": "STORY-EN-001-S04",
+      "approved_drive_file_id": "1LP-1BM5ze3o-JhZRDh45UGIc78k1w8mC",
+      "approved_drive_url": "https://drive.google.com/file/d/1LP-1BM5ze3o-JhZRDh45UGIc78k1w8mC/view",
+      "source_draft_drive_file_id": "10PTZrD9x0SshNSE3b1tqDzy9pQ4LVcV1",
+      "status": "ImageApproved"
+    },
+    {
+      "scene_id": "STORY-EN-001-S05",
+      "approved_drive_file_id": "1VAbgRkyBD7de-TNqgibVzhuddkjVWAkL",
+      "approved_drive_url": "https://drive.google.com/file/d/1VAbgRkyBD7de-TNqgibVzhuddkjVWAkL/view",
+      "source_draft_drive_file_id": "1Z4v3DVQILu0I3BnNv7UOPvwTpgR_6xFA",
+      "status": "ImageApproved"
+    },
+    {
+      "scene_id": "STORY-EN-001-S06",
+      "approved_drive_file_id": "1auDQVnRZoDz2LV2hhNHOcI_S0cr4nziB",
+      "approved_drive_url": "https://drive.google.com/file/d/1auDQVnRZoDz2LV2hhNHOcI_S0cr4nziB/view",
+      "source_draft_drive_file_id": "1905BzYexA-m8EC6qeILBz8VYufK9C_al",
+      "status": "ImageApproved"
+    }
+  ],
+  "verification": {
+    "copy_operation": "success 6/6",
+    "folder_readback": "matched six IDs and PNG types",
+    "copied_sizes": "matched source values",
+    "remote_checksum": "not separately calculated"
+  },
+  "cautions": [
+    "Keep original drafts unchanged",
+    "No audio exists for V2",
+    "Final video not approved",
+    "Do not assume public Drive permissions"
+  ]
+}
