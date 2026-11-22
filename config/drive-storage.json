@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "provider": "google_drive",
   "root_folder_id": "1mptg083MKUgLguzbsmWlhMqTW7BdrwNY",
   "root_folder_name": "2569",
@@ -10,5 +10,12 @@
   "read_verification": "folder and file readback passed 2026-11-22",
   "visibility": "access_not_verified",
   "secrets_note": "Folder IDs are routing metadata, not authorization credentials. Never store OAuth tokens or client secrets in this repo.",
-  "upload_note": "Pilot upload tested using ChatGPT Google Drive connector. Production worker upload credentials and auth not configured yet."
+  "upload_note": "Pilot upload tested using ChatGPT Google Drive connector. Production worker upload credentials and auth not configured yet.",
+  "scene_image_drafts": {
+    "folder_id": "1Des_VC-5FYDMLPXcN9tRESIQRRBX8b_k",
+    "folder_url": "https://drive.google.com/drive/folders/1Des_VC-5FYDMLPXcN9tRESIQRRBX8b_k",
+    "assets": "STORY-EN-001 S01-S06",
+    "images_verified": 6,
+    "status": "awaiting_visual_approval"
+  }
 }
