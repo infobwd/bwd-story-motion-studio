@@ -5,7 +5,7 @@
 
 ระบบในแผน: สร้างคลิปสั้นเล่าเรื่องด้วยตัวละครประจำจากบท Google Sheets → แยก Storyboard เป็นฉาก → เข้าคิว Supabase → เรนเดอร์ด้วย Worker ภายนอก → ตรวจ QA → อัปโหลด Google Drive → เปิดดูและติดตามผ่าน GitHub Pages
 
-> **Current status: ImageApproved 6/6; voice draft pending; silent Animatic V2 in Drive.** ผู้ใช้อนุมัติภาพครบ 6 ฉากแล้ว มีสคริปต์ทดลอง Kokoro ฟรีผ่าน dry-run แต่ยังไม่ได้สร้างเสียงจริงหรือวิดีโอฉบับสมบูรณ์
+> **Current status: ImageApproved 6/6; Gemini Cloud TTS S01 dry-run passed; account authorization missing; no audio file.** มี Visual Animatic แบบไม่มีเสียง แต่ยังไม่ใช่คลิป final
 
 ## เอกสารที่ควรอ่าน
 - [Master Plan / Architecture](docs/MASTER_PLAN.md)
@@ -50,8 +50,14 @@ Actions บน Standard runners สำหรับ Public Repo ฟรีใน�
 - [สคริปต์เสียง](tools/generate_voice_kokoro.py) และ [ตัวอย่าง export จาก Google Sheet](examples/STORY-EN-001_sheet_export_for_voice_20261122.json) — Python compile + dry-run PASS, ไม่มีไฟล์เสียงที่ผลิตจริง
 - [Google Drive เอกสารเตรียมเสียง](https://drive.google.com/drive/folders/122SYWkyqHgXSe6-aFD8XYyBJbGDSv2rb)
 
+## ทดลอง Gemini Cloud TTS ฟรี (22 พ.ย. 2569)
+- ผู้ใช้ระบุ **ไม่ใช้เครื่องคอมพิวเตอร์โรงเรียน** ดังนั้น Kokoro Local เป็นทางเลือกสำรอง ไม่ใช่ตัวเลือกหลักปัจจุบัน
+- เลือกทดสอบ Gemini Free Tier ใน [Google AI Studio](https://aistudio.google.com/welcome) เฉพาะ S01 ก่อน ไม่เปิด Paid Tier
+- [รายงานการทดสอบ Gemini S01](docs/GEMINI_TTS_SCENE01_TRIAL_20261122.md) · [Script ทดสอบ API](tools/generate_gemini_s01_trial.py) · [Voice Prompt](examples/STORY-EN-001_S01_GEMINI_TTS_PROMPT.txt)
+- **Dry Run ผ่าน แต่ยังไม่มีการเข้าสู่ระบบบัญชี Google AI Studio หรือ API Key ที่อนุญาตให้เรียก จึงยังไม่มีเสียงจริง**
+
 ## ขั้นต่อไป
-ติดตั้งโมเดล Kokoro บน Worker ที่ได้รับอนุญาต → ผลิตและตรวจเสียงนิทานภาษาอังกฤษ → ตรวจ timing/subtitles → เรนเดอร์และ QA MP4 V2 Final → อัปโหลด Drive; ระบบ Supabase/worker แบบอัตโนมัติยังไม่ดำเนินการ
+ลงชื่อเข้าใช้ Google AI Studio อย่างปลอดภัย → ทดลองเสียง S01 ภายใต้ Free Tier → QA ฟังเสียง → ถ้าผ่านจึงผลิตครบ 6 ฉากและเรนเดอร์ MP4; ระบบ Queue/Worker อัตโนมัติยังไม่ดำเนินการ
 
 ## ความปลอดภัย
 Repository เป็น Public: **ห้าม commit credentials, tokens, ข้อมูลนักเรียนหรือบทลับ**. Secrets จัดเก็บบน backend; frontend ใช้ Supabase publishable key และ RLS เท่านั้น
