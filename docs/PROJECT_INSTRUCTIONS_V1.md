@@ -1,4 +1,4 @@
-# ChatGPT Project Instructions v1.2 — BWD Story Motion Studio
+# ChatGPT Project Instructions v1.3 — BWD Story Motion Studio
 Updated: 2026-11-22 | Copy เฉพาะข้อความใต้เส้นคั่นไปใช้ใน ChatGPT Project Instructions (ไม่เกิน 8,000 ตัวอักษร)
 
 ---
@@ -9,7 +9,7 @@ Updated: 2026-11-22 | Copy เฉพาะข้อความใต้เส�
 - Repo หลัก: https://github.com/infobwd/bwd-story-motion-studio (branch main)
 - ก่อนทำงานใหม่ให้อ่าน README.md และ docs/MASTER_PLAN.md, docs/ROADMAP_AND_QA.md, docs/GITHUB_ACTIONS_COST_AND_POLICY.md รวมถึงไฟล์/Issue ที่เกี่ยวข้องใน Repo โดยใช้ข้อมูลสด ไม่อาศัยความจำแทนหลักฐาน
 - หากคำสั่งสั้นนี้ไม่ครอบคลุม ให้ใช้เอกสารใน Repo เป็นหลัก และบันทึกการเปลี่ยนแปลงสำคัญกลับเข้า Repo พร้อมเวอร์ชัน
-- STORY-EN-001: คลิป V1 ต้องแก้ภาพและเสียง; ภาพร่าง 6 ฉากลง Drive และสร้าง **Visual Animatic V2 แบบไม่มีเสียง** (50 วินาที) แล้ว ตรวจไฟล์เทคนิคผ่าน แต่ภาพยังไม่อนุมัติ เสียงใหม่ยังไม่สร้าง ไม่มีคลิป final V2 อ่าน docs/ANIMATIC_V2_QA_20261122.md, docs/VOICE_PRODUCTION_REQUEST_STORY-EN-001.md และ asset manifest ก่อนทำงาน ห้ามรายงานว่าระบบผลิตอัตโนมัติใช้งานได้
+- STORY-EN-001: ผู้ใช้อนุมัติภาพนิ่ง 6/6 (22 พ.ย. 2569), สำเนาภาพ Approved อยู่ใน Drive; มี Visual Animatic V2 ไม่มีเสียง 50 วินาที เทคนิคผ่าน; เลือก Kokoro TTS แบบ Offline ฟรีเป็นแนวทาง แต่ยังไม่ได้สร้างเสียงใหม่หรือ MP4 final อ่าน docs/FREE_TTS_DECISION_20261122.md, docs/ANIMATIC_V2_QA_20261122.md และ approved asset manifest ก่อนทำงาน ห้ามรายงานว่าระบบผลิตอัตโนมัติใช้งานได้
 
 ## 2. เป้าหมายและรูปแบบผลงาน
 - รับบท Google Sheets → Storyboard → อนุมัติบท → สร้างภาพรายฉากลง Drive (Draft) → **อนุมัติภาพแต่ละฉาก** → สร้างเสียงพากย์ที่ดี (Draft) → **Voice QA/อนุมัติ** → เข้าคิว Supabase → Worker ทำ Motion/MP4 → QA → อัปโหลด Google Drive → ตรวจ File ID/URL/สถานะ
