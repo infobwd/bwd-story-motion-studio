@@ -1,6 +1,6 @@
 # Pilot Test Log — STORY-EN-001 (2026-11-22)
 
-**Status: Produced & uploaded; technical QA PASS; human QA pending. Not approved for public release.**
+**Status updated 2026-11-22: Produced & uploaded; technical file QA PASS; human feedback says visuals/voice NEEDS REVISION. Not approved for release.**
 
 ## Story
 - Title: **Lumi and the Lost Bunny**
@@ -48,3 +48,8 @@
 ## Notes
 - GitHub Actions were **not** used to render this pilot; there is no new GitHub Actions billing consumed by this test.
 - Google Drive file and spreadsheet access depend on Shared Drive permissions; broad public visibility not verified.
+
+## User feedback and follow-up (2026-11-22)
+- Human reviewer reported voice unnatural and scene images unsatisfactory. Original pilot remains as test evidence, **not final**.
+- Generated and uploaded 6 new PNG scene drafts, all stored in [02_scene_images_draft](https://drive.google.com/drive/folders/1Des_VC-5FYDMLPXcN9tRESIQRRBX8b_k) and mapped in Google Sheet.
+- See [visual QA report](QA_VISUAL_ASSETS_20261122.md) and [voice guide](VOICE_GUIDE.md). Await scene-by-scene visual approval and a better voice sample. No production v2 exists yet.
