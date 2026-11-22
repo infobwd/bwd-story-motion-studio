@@ -1,4 +1,4 @@
-# BWD Story Motion Studio — Master Plan v1.4
+# BWD Story Motion Studio — Master Plan v1.5
 วันที่: 22 พฤศจิกายน 2569 | สถานะ: ImageApproved 6/6 / silent animatic V2 uploaded / voice generation pending / production automation not built
 Project: **BWD Story Motion Studio — AI Video Production**
 Repository: https://github.com/infobwd/bwd-story-motion-studio
@@ -126,3 +126,11 @@ Draft → StoryboardReady → ScriptApproved → Queued → Claimed → AssetsRe
 - Live S01 narration verified from Sheet, prompt and no-key-safe test harness committed to repo and copied to Drive.
 - `python -m py_compile` PASS and `--dry-run` PASS; no real Gemini request sent because Google AI Studio sign-in/API key are not available via current tools. **Voice files 0, VoiceApproved=false**.
 - Account ownership/Google AI Studio authorization must be completed securely before any live audio generation. [Trial evidence](GEMINI_TTS_SCENE01_TRIAL_20261122.md).
+
+## 17. Apps Script cloud voice queue MVP — implemented source/staged 2026-11-22
+- Designed no-school-computer solution: ChatGPT Google Sheets connector writes `VoiceQueue` → Google Apps Script (time-driven 5-min trigger once installed) → Gemini REST Interactions TTS Free Tier → Google Drive WAV → queue/scene state + audit events.
+- Created real `VoiceQueue` and `VoiceEvents` tabs in existing STORY-EN-001 Sheet; staged precisely **one** S01 job `VOICE-STORY-EN-001-S01-5fa460d8` with `PendingSetup`, not `Queued`.
+- Source `apps-script/Code.gs`, `apps-script/appsscript.json`, mocked tests 11/11 PASS; GitHub + Drive worker setup files published.
+- Security: no stored secrets in Public Repo; gates require private Script Properties + owner-verified non-billing Gemini Free project; limited model/voice, no auto retry, hard daily request cap, atomic Sheet claim with LockService and idempotency.
+- **Actual deployment NOT DONE**: Connected Google Drive app does not expose Apps Script project creation/content write/trigger authorization; owner must perform one-time Google Apps Script editor OAuth and secret configuration; no Gemini real request or new WAV created.
+- References: [worker setup](APPS_SCRIPT_VOICE_WORKER_SETUP.md), [QA report](APPS_SCRIPT_VOICE_MVP_QA_20261122.md). This is **not** Supabase production queue and does not imply any video worker/render stage.
