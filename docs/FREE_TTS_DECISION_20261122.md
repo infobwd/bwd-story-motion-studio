@@ -65,3 +65,8 @@ python tools/generate_voice_kokoro.py \
 
 ## Blocker / milestone
 Next real milestone is to install and run the ONNX model on an authorized computer, generate one scene-voice trial, listen to it, and correct pronunciation or timing. Then produce all six, perform voice QA, compositing, and final QA. No server setup or paid subscription has been authorized or created.
+
+## 2026-11-22 implementation status — Cloud Google Apps Script queue
+- Chosen MVP path is **ChatGPT → Google Sheets VoiceQueue → Apps Script timed trigger → Gemini 3.1 Flash TTS Preview Free Tier → Google Drive WAV**, no local PC.
+- One S01 job staged as `PendingSetup`. Script worker (not deployed) and 11 mock tests available: [guide](APPS_SCRIPT_VOICE_WORKER_SETUP.md) and [code](../apps-script/Code.gs).
+- Google Workspace OAuth, Gemini private key and free-tier check remain owner-controlled. No request, file, or paid tier activation has occurred.
