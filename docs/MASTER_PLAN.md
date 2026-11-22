@@ -1,9 +1,9 @@
 # BWD Story Motion Studio — Master Plan v1.0
-วันที่: 22 พฤศจิกายน 2569 | สถานะ: Approved direction / Planning only
+วันที่: 22 พฤศจิกายน 2569 | สถานะ: Manual pilot uploaded / Technical QA pass; Production Automation not built
 Project: **BWD Story Motion Studio — AI Video Production**
 Repository: https://github.com/infobwd/bwd-story-motion-studio
 
-> โครงการนี้ยังไม่ใช่ระบบผลิตคลิปที่ใช้งานได้จริง เอกสารนี้เป็นหลักการออกแบบและแผนดำเนินการเท่านั้น
+> โครงการมีคลิปนำร่องแบบผลิตเฉพาะกิจและอัปโหลด Drive ผ่านแล้ว แต่ยังไม่มีระบบผลิตวิดีโออัตโนมัติหรือ QA โดยผู้ตรวจรับ
 
 ## 1. วิสัยทัศน์
 พัฒนาระบบผลิตคลิปสั้นเชิงเล่าเรื่อง (character-led motion graphics) จากบทใน Google Sheets โดยแบ่งเรื่องเป็นฉากอย่างเป็นระบบ ควบคุมตัวละครประจำ สร้าง/ประสานเสียงพากย์และคำบรรยาย ตรวจคุณภาพก่อนเผยแพร่ จัดเก็บ MP4 ที่ Google Drive และบริหารการผลิตผ่าน GitHub Pages ที่เชื่อม Supabase ผู้ใช้สามารถสั่งงาน/ตรวจสถานะผ่าน ChatGPT ได้ตามสิทธิ์ของเครื่องมือที่เชื่อมต่อ
@@ -84,3 +84,13 @@ Draft → StoryboardReady → ScriptApproved → Queued → Claimed → AssetsRe
 - [PROJECT_INSTRUCTIONS_V1.md](PROJECT_INSTRUCTIONS_V1.md)
 - [ROADMAP_AND_QA.md](ROADMAP_AND_QA.md)
 - [GITHUB_ACTIONS_COST_AND_POLICY.md](GITHUB_ACTIONS_COST_AND_POLICY.md)
+
+## 12. ผลทดสอบการผลิตแรก (22 พ.ย. 2569)
+- ทดลองคลิปต้นฉบับภาษาอังกฤษ **STORY-EN-001 / Lumi and the Lost Bunny** จำนวน 6 ฉาก ความยาว 50 วินาที แบบ 9:16
+- ได้ MP4 จาก local vector/FFmpeg, เสียงสังเคราะห์ English offline, ซับฝังบนภาพ; QA ด้านไฟล์เบื้องต้น PASS และ upload Google Drive จริงแล้ว
+- โฟลเดอร์ปลายทางปี 2569: https://drive.google.com/drive/folders/1mptg083MKUgLguzbsmWlhMqTW7BdrwNY
+- โฟลเดอร์คลิปที่สร้างแล้ว: https://drive.google.com/drive/folders/1Cpb4Epc8iAmplFx8yVu1bwyRkpAlnLLl
+- Google Sheet สำหรับ Script/Storyboard: https://docs.google.com/spreadsheets/d/1FwQK1zftNFEI0gIX7V-Pfwo6Dl9JSHld0IXnExC69do/edit?usp=drivesdk
+- MP4 Drive: https://drive.google.com/file/d/15bLE8DvnoV17hmL1Z7AYDFWAU950cOVN/view?usp=drivesdk
+- **ยังไม่มี Supabase queue หรือ deployed worker**; ตัวอย่างทดสอบนี้ไม่ผ่านระบบคิวอัตโนมัติ; human QA ยังไม่ผ่าน ห้ามระบุว่าส่งมอบเป็นงานเผยแพร่แล้ว
+- รายละเอียดหลักฐาน/QA: [PILOT_TEST_LOG_20261122.md](PILOT_TEST_LOG_20261122.md); config: [drive-storage.json](../config/drive-storage.json)
