@@ -1,0 +1,74 @@
+{
+  "story_id": "STORY-EN-001",
+  "title": "Lumi and the Lost Bunny",
+  "audience": "English language learners in primary school",
+  "language": "en-US",
+  "type": "original_children_story",
+  "theme": "kindness and helping others",
+  "script_revision": "v1",
+  "video_duration_seconds": 50,
+  "orientation": "9:16",
+  "scenes": [
+    {
+      "scene_id": "STORY-EN-001-S01",
+      "duration_seconds": 8,
+      "title": "LOST IN THE WOODS",
+      "narration": "One evening, Lumi the firefly saw a little bunny crying in the forest.",
+      "preset": "forest"
+    },
+    {
+      "scene_id": "STORY-EN-001-S02",
+      "duration_seconds": 8,
+      "title": "A LITTLE PROBLEM",
+      "narration": "I am lost, said Ben. I cannot find my way home.",
+      "preset": "crying"
+    },
+    {
+      "scene_id": "STORY-EN-001-S03",
+      "duration_seconds": 9,
+      "title": "FOLLOW THE LIGHT",
+      "narration": "Lumi smiled. Follow my tiny light. We can find the path together.",
+      "preset": "trail"
+    },
+    {
+      "scene_id": "STORY-EN-001-S04",
+      "duration_seconds": 8,
+      "title": "A BRAVE JOURNEY",
+      "narration": "They crossed a stream and walked past the tall trees.",
+      "preset": "river"
+    },
+    {
+      "scene_id": "STORY-EN-001-S05",
+      "duration_seconds": 8,
+      "title": "HOME AT LAST",
+      "narration": "At last, Ben saw his cozy home. Thank you, Lumi!",
+      "preset": "home"
+    },
+    {
+      "scene_id": "STORY-EN-001-S06",
+      "duration_seconds": 9,
+      "title": "A BIG LESSON",
+      "narration": "Even a small light can make a big difference. The end.",
+      "preset": "moral"
+    }
+  ],
+  "google_sheet_id": "1FwQK1zftNFEI0gIX7V-Pfwo6Dl9JSHld0IXnExC69do",
+  "google_sheet_url": "https://docs.google.com/spreadsheets/d/1FwQK1zftNFEI0gIX7V-Pfwo6Dl9JSHld0IXnExC69do/edit?usp=drivesdk",
+  "video_drive_id": "15bLE8DvnoV17hmL1Z7AYDFWAU950cOVN",
+  "video_drive_url": "https://drive.google.com/file/d/15bLE8DvnoV17hmL1Z7AYDFWAU950cOVN/view?usp=drivesdk",
+  "verification": {
+    "uploaded": true,
+    "uploaded_bytes": 958389,
+    "sha256_local": "ab9ee37594779787fb4fb23948469c6c560ce60632919f61419769d9ccd2b4a8",
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "width": 540,
+    "height": 960,
+    "fps": 12,
+    "duration_seconds": 50,
+    "technical_qa": "pass",
+    "human_qa": "pending",
+    "publish_approved": false
+  },
+  "note": "Pilot made offline with vector shapes and synthetic English TTS. Not processed by production worker/Supabase."
+}
