@@ -1,4 +1,4 @@
-# ChatGPT Project Instructions v1.0 — BWD Story Motion Studio
+# ChatGPT Project Instructions v1.1 — BWD Story Motion Studio
 Updated: 2026-11-22 | Copy เฉพาะข้อความใต้เส้นคั่นไปใช้ใน ChatGPT Project Instructions (ไม่เกิน 8,000 ตัวอักษร)
 
 ---
@@ -9,10 +9,10 @@ Updated: 2026-11-22 | Copy เฉพาะข้อความใต้เส�
 - Repo หลัก: https://github.com/infobwd/bwd-story-motion-studio (branch main)
 - ก่อนทำงานใหม่ให้อ่าน README.md และ docs/MASTER_PLAN.md, docs/ROADMAP_AND_QA.md, docs/GITHUB_ACTIONS_COST_AND_POLICY.md รวมถึงไฟล์/Issue ที่เกี่ยวข้องใน Repo โดยใช้ข้อมูลสด ไม่อาศัยความจำแทนหลักฐาน
 - หากคำสั่งสั้นนี้ไม่ครอบคลุม ให้ใช้เอกสารใน Repo เป็นหลัก และบันทึกการเปลี่ยนแปลงสำคัญกลับเข้า Repo พร้อมเวอร์ชัน
-- ผลทดสอบ STORY-EN-001 (22 พ.ย. 2569) ผลิต MP4 เฉพาะกิจและอัปโหลด Google Drive ผ่าน technical QA แล้ว แต่ยังรอ human QA และยังไม่มี production worker หรือ Supabase queue อ่าน docs/PILOT_TEST_LOG_20261122.md และ config/drive-storage.json ก่อนเริ่มงานใหม่ ห้ามรายงานว่าระบบผลิตอัตโนมัติใช้งานได้
+- STORY-EN-001: คลิป v1 แม้ไฟล์เทคนิคผ่าน แต่ผู้ใช้แจ้งให้แก้ภาพและเสียง; ภาพร่างใหม่ 6 ฉากอัปโหลด Drive แล้ว รอตรวจรับทุกฉาก ไม่มีเสียงใหม่หรือ MP4 v2 อ่าน docs/QA_VISUAL_ASSETS_20261122.md, docs/VISUAL_STYLE_GUIDE.md, docs/VOICE_GUIDE.md และ assets/STORY-EN-001_visual_draft_manifest_v1.json ก่อนดำเนินงาน ห้ามรายงานว่าระบบผลิตอัตโนมัติใช้งานได้
 
 ## 2. เป้าหมายและรูปแบบผลงาน
-- รับบทจาก Google Sheets → วิเคราะห์โครงเรื่อง → Storyboard แยกฉาก → อนุมัติ → เข้าคิว Supabase → สร้างตัวละคร/กราฟิก/เสียง/ซับ → Worker เรนเดอร์ MP4 → QA → อัปโหลด Google Drive → บันทึก File ID/URL/สถานะให้ตรงกัน
+- รับบท Google Sheets → Storyboard → อนุมัติบท → สร้างภาพรายฉากลง Drive (Draft) → **อนุมัติภาพแต่ละฉาก** → สร้างเสียงพากย์ที่ดี (Draft) → **Voice QA/อนุมัติ** → เข้าคิว Supabase → Worker ทำ Motion/MP4 → QA → อัปโหลด Google Drive → ตรวจ File ID/URL/สถานะ
 - คลิปต้นแบบ 9:16, 45–60 วินาที, 5–6 ฉาก, ตัวละครประจำ 1 ตัว; ต่อไปเพิ่มหลายตัวและแนวนอน 16:9 ได้
 - Story arc: Hook → Context → Explain → Example → Takeaway → Outro; ยึดความเข้าใจผู้ชม ไม่ยัดข้อมูล
 - Visual system โทนน้ำเงิน–เหลือง ใช้ฟอนต์ไทยที่อ่านง่ายบนมือถือ ตัวละครหน้า/ชุด/เสียง/ท่าทางต่อเนื่องทุกฉาก
