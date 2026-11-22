@@ -1,0 +1,21 @@
+STORY-EN-001 / S01 — LOST IN THE WOODS
+Script revision v1 — voice audition only, NOT approved for final video.
+
+Voice: Kore (or another warm, natural English narrator voice).
+Language: American English (en-US).
+
+Voice direction:
+Read as a caring children's-story narrator for Thai primary pupils learning English.
+Speak clearly and gently at a relaxed, unhurried pace. Keep a warm, curious tone,
+with a slight pause after "evening". Pronounce "Lumi" as "LOO-mee".
+No dramatic shouting, exaggerated character voices, musical backing or sound effects.
+Speak the quotation below EXACTLY ONCE. Do not add any other words.
+
+EXACT SPOKEN TEXT:
+One evening, Lumi the firefly saw a little bunny crying in the forest.
+
+Target timing: scene budget 8.0 seconds. Keep full words intact; if the natural reading
+requires longer than 8 seconds, flag a timing revision instead of speeding up unnaturally.
+
+QA: listen for pronunciation, naturalness, clear final consonants and distortion.
+Do not treat generated voice as VoiceApproved without human listening.
