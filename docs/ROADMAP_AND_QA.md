@@ -1,4 +1,4 @@
-# Implementation Roadmap & QA — v1.4
+# Implementation Roadmap & QA — v1.5
 Updated: 2026-11-22 | One manually produced pilot and six new scene-image drafts; production automation not built
 
 ## Roadmap
@@ -91,3 +91,10 @@ Mobile bottom nav & bottom sheet, responsive 9:16 preview, PWA, safe-area and pu
 - S01 prompt and secure API sample prepared and dry-run tested; verified no API key. Real voice not produced (authorization required).
 - Next gate: sign in Gemini AI Studio/authorize project (no paid upgrade) → one S01 voice test → human listening & timing QA → six scene audio drafts.
 - [Gemini S01 trial log](GEMINI_TTS_SCENE01_TRIAL_20261122.md).
+
+## MVP1 Cloud voice queue milestone (2026-11-22)
+- Completed: Google Sheets `VoiceQueue` + `VoiceEvents`, S01 staged in `PendingSetup`, source code + manifest in GitHub, 11/11 mock unit tests PASS.
+- **Not completed**: Apps Script bound project creation, Google OAuth authorization, private API-key configuration, timer trigger, real Gemini API call, WAV and human voice QA.
+- Next gate: account owner installs Apps Script via Sheet → checks project free-tier and no Billing → sets private Script Properties → authorizes scopes → arms S01 → runs first real TTS → listens/QA.
+- No Google Actions render runner, no Supabase schema changes or new cloud billing incurred from this stage.
+- [Deployment instructions](APPS_SCRIPT_VOICE_WORKER_SETUP.md), [QA evidence](APPS_SCRIPT_VOICE_MVP_QA_20261122.md).
