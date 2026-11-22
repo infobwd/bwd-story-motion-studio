@@ -43,3 +43,8 @@ Status: **Visual preview created and uploaded; technical QA pass; visual editori
 
 ## Next gate
 Review the animatic/storyboard visually, mark approval or revisions per scene; choose/authorize a licensed natural-sounding TTS or recording service. Create and audition six voice clips with timing before final animated/rendered V2. Keep `ImageApproved`, `VoiceApproved`, and `Delivered` false until documented.
+
+## Image QA update (2026-11-22)
+- User now confirms six images are OK. ImageApproved for S01-S06, copied to dedicated approved folder; source draft images retained unchanged.
+- This approval is for still images only; remains pending for animation timing, voice, synchronization, and full MP4 final.
+- Manifest: [STORY-EN-001_visual_approved_manifest_v1.json](../assets/STORY-EN-001_visual_approved_manifest_v1.json). TTS recommendation: [free Kokoro decision](FREE_TTS_DECISION_20261122.md).
