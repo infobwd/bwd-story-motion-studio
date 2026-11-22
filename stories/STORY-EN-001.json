@@ -79,6 +79,20 @@
     "visual_revision": "v1",
     "approval_status": "draft_awaiting_human_review"
   },
-  "voice_status": "needs_revision_existing_voice_not_approved",
-  "v2_render_status": "not_started"
+  "voice_status": "needs_new_natural_english_voice_service_and_human_review",
+  "v2_render_status": "visual_animatic_only_final_not_started",
+  "visual_animatic_v2": {
+    "status": "uploaded_silent_draft_technical_qa_pass",
+    "script_revision": "v1",
+    "drive_file_id": "1p3uyTiY4SuLiP4IAohp0WOYbuO30cHwM",
+    "drive_url": "https://drive.google.com/file/d/1p3uyTiY4SuLiP4IAohp0WOYbuO30cHwM/view?usp=drivesdk",
+    "duration_seconds": 50,
+    "resolution": "720x1280",
+    "fps": 20,
+    "bytes": 4277209,
+    "sha256_local": "284bc00af128fed436ad95f5095e7269fdf39df9d525b818b124898d2bcbbdce",
+    "human_qa": "pending",
+    "voice": "not_generated",
+    "final": false
+  }
 }
