@@ -1,0 +1,15 @@
+{
+  "model": "gemini-3.1-flash-tts-preview",
+  "input": "Speak as a warm and gentle American English narrator for primary-school children learning English. Read at an unhurried, natural pace, with a small pause after 'evening'. Pronounce Lumi 'LOO-mee'. Say the text after the colon exactly once, without extra words: One evening, Lumi the firefly saw a little bunny crying in the forest.",
+  "response_format": {
+    "type": "audio"
+  },
+  "generation_config": {
+    "speech_config": [
+      {
+        "voice": "Kore"
+      }
+    ]
+  }
+}
+DRY_RUN_ONLY — no request and no audio created
