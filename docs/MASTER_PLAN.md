@@ -3,7 +3,7 @@
 Project: **BWD Story Motion Studio — AI Video Production**
 Repository: https://github.com/infobwd/bwd-story-motion-studio
 
-> คลิปนำร่อง v1 อัปโหลด Drive แล้วแต่ผู้ใช้ให้ข้อเสนอแนะว่าเสียงและภาพไม่ผ่าน; ภาพร่าง 6 ฉากชุดใหม่อยู่ใน Drive รออนุมัติ ยังไม่มี production worker/queue
+> คลิปนำร่อง V1 ต้องแก้เสียงและภาพ; ภาพใหม่ 6/6 ฉากผ่านอนุมัติแล้ว มี Google Sheets VoiceQueue ทดสอบที่ยัง PendingSetup แต่ยังไม่มี Google Apps Script ที่ติดตั้งจริง, Supabase production queue หรือ Video Worker
 
 ## 1. วิสัยทัศน์
 พัฒนาระบบผลิตคลิปสั้นเชิงเล่าเรื่อง (character-led motion graphics) จากบทใน Google Sheets โดยแบ่งเรื่องเป็นฉากอย่างเป็นระบบ ควบคุมตัวละครประจำ สร้าง/ประสานเสียงพากย์และคำบรรยาย ตรวจคุณภาพก่อนเผยแพร่ จัดเก็บ MP4 ที่ Google Drive และบริหารการผลิตผ่าน GitHub Pages ที่เชื่อม Supabase ผู้ใช้สามารถสั่งงาน/ตรวจสถานะผ่าน ChatGPT ได้ตามสิทธิ์ของเครื่องมือที่เชื่อมต่อ
@@ -134,3 +134,5 @@ Draft → StoryboardReady → ScriptApproved → Queued → Claimed → AssetsRe
 - Security: no stored secrets in Public Repo; gates require private Script Properties + owner-verified non-billing Gemini Free project; limited model/voice, no auto retry, hard daily request cap, atomic Sheet claim with LockService and idempotency.
 - **Actual deployment NOT DONE**: Connected Google Drive app does not expose Apps Script project creation/content write/trigger authorization; owner must perform one-time Google Apps Script editor OAuth and secret configuration; no Gemini real request or new WAV created.
 - References: [worker setup](APPS_SCRIPT_VOICE_WORKER_SETUP.md), [QA report](APPS_SCRIPT_VOICE_MVP_QA_20261122.md). This is **not** Supabase production queue and does not imply any video worker/render stage.
+
+- One-time setup blocker tracked as [Issue #1](https://github.com/infobwd/bwd-story-motion-studio/issues/1).
