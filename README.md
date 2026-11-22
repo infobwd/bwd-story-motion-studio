@@ -5,7 +5,7 @@
 
 ระบบในแผน: สร้างคลิปสั้นเล่าเรื่องด้วยตัวละครประจำจากบท Google Sheets → แยก Storyboard เป็นฉาก → เข้าคิว Supabase → เรนเดอร์ด้วย Worker ภายนอก → ตรวจ QA → อัปโหลด Google Drive → เปิดดูและติดตามผ่าน GitHub Pages
 
-> **Current status: Silent Visual Animatic V2 uploaded; human visual QA pending; voice not generated.** คลิป V1 ยัง NeedsRevision; มีภาพร่าง 6 ฉากและวิดีโอทดสอบแบบไม่มีเสียง V2 ใน Drive แต่ยังไม่มี production worker, Supabase queue หรือ GitHub Pages
+> **Current status: ImageApproved 6/6; voice draft pending; silent Animatic V2 in Drive.** ผู้ใช้อนุมัติภาพครบ 6 ฉากแล้ว มีสคริปต์ทดลอง Kokoro ฟรีผ่าน dry-run แต่ยังไม่ได้สร้างเสียงจริงหรือวิดีโอฉบับสมบูรณ์
 
 ## เอกสารที่ควรอ่าน
 - [Master Plan / Architecture](docs/MASTER_PLAN.md)
@@ -44,8 +44,14 @@ Actions บน Standard runners สำหรับ Public Repo ฟรีใน�
 - [Animatic renderer source](tools/render_visual_animatic.py) · [V2 QA](docs/ANIMATIC_V2_QA_20261122.md) · [Voice production brief](docs/VOICE_PRODUCTION_REQUEST_STORY-EN-001.md)
 - สถานะ: **Pilot v1 NeedsRevision; V2 เป็นภาพเคลื่อนไหวและคำบรรยายแบบ Silent Draft เท่านั้น** รอ VisualApproval และบริการเสียงพากย์คุณภาพดี ก่อนทำ MP4 final
 
+## อัปเดตภาพและเสียง 22 พ.ย. 2569
+- [ภาพ Approved ครบ 6/6](https://drive.google.com/drive/folders/18nLmhtYKEAmYiwmSr19PCE4ESM8uo7dJ) · [Approved Manifest](assets/STORY-EN-001_visual_approved_manifest_v1.json)
+- **ทางเลือกเสียงที่คัดเลือก**: [Kokoro-82M Offline TTS](docs/FREE_TTS_DECISION_20261122.md) (โมเดล Apache-2.0, wrapper MIT, ไม่เสียค่า API; ต้องมีเครื่องติดตั้ง)
+- [สคริปต์เสียง](tools/generate_voice_kokoro.py) และ [ตัวอย่าง export จาก Google Sheet](examples/STORY-EN-001_sheet_export_for_voice_20261122.json) — Python compile + dry-run PASS, ไม่มีไฟล์เสียงที่ผลิตจริง
+- [Google Drive เอกสารเตรียมเสียง](https://drive.google.com/drive/folders/122SYWkyqHgXSe6-aFD8XYyBJbGDSv2rb)
+
 ## ขั้นต่อไป
-ตรวจรับภาพและ Visual Animatic V2 เป็นรายฉาก → เชื่อม/บันทึกเสียงพากย์ภาษาอังกฤษที่ใช้งานได้จริง → QA เสียงและคำบรรยาย → จัดทำตัวละครเคลื่อนไหวและ MP4 ฉบับสมบูรณ์ → ตรวจ QA/อัปโหลด Drive; ระบบ Supabase/worker อัตโนมัติยังไม่ดำเนินการ
+ติดตั้งโมเดล Kokoro บน Worker ที่ได้รับอนุญาต → ผลิตและตรวจเสียงนิทานภาษาอังกฤษ → ตรวจ timing/subtitles → เรนเดอร์และ QA MP4 V2 Final → อัปโหลด Drive; ระบบ Supabase/worker แบบอัตโนมัติยังไม่ดำเนินการ
 
 ## ความปลอดภัย
 Repository เป็น Public: **ห้าม commit credentials, tokens, ข้อมูลนักเรียนหรือบทลับ**. Secrets จัดเก็บบน backend; frontend ใช้ Supabase publishable key และ RLS เท่านั้น
