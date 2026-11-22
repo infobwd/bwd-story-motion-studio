@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "provider": "google_drive",
   "root_folder_id": "1mptg083MKUgLguzbsmWlhMqTW7BdrwNY",
   "root_folder_name": "2569",
@@ -41,5 +41,16 @@
     "draft_engine": "Kokoro-82M",
     "setup_status": "not_installed",
     "audio_files": "none"
+  },
+  "apps_script_voice_worker_setup": {
+    "folder_id": "16R01HlPdMe_gprIux84Qe2Cw7EVM4Q0D",
+    "folder_url": "https://drive.google.com/drive/folders/16R01HlPdMe_gprIux84Qe2Cw7EVM4Q0D",
+    "sheet_id": "1FwQK1zftNFEI0gIX7V-Pfwo6Dl9JSHld0IXnExC69do",
+    "queue_sheet_name": "VoiceQueue",
+    "event_sheet_name": "VoiceEvents",
+    "staged_job_id": "VOICE-STORY-EN-001-S01-5fa460d8",
+    "staged_job_state": "PendingSetup",
+    "deployment_status": "not_installed",
+    "api_calls": 0
   }
 }
