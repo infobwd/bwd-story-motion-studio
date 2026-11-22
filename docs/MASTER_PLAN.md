@@ -1,5 +1,5 @@
-# BWD Story Motion Studio — Master Plan v1.1
-วันที่: 22 พฤศจิกายน 2569 | สถานะ: Pilot v1 NeedsRevision / scene-image drafts 6/6 uploaded / production automation not built
+# BWD Story Motion Studio — Master Plan v1.2
+วันที่: 22 พฤศจิกายน 2569 | สถานะ: Pilot v1 NeedsRevision / silent animatic V2 uploaded / voice+visual QA pending / production automation not built
 Project: **BWD Story Motion Studio — AI Video Production**
 Repository: https://github.com/infobwd/bwd-story-motion-studio
 
@@ -102,3 +102,12 @@ Draft → StoryboardReady → ScriptApproved → Queued → Claimed → AssetsRe
 - Google Sheet `Scenes!H1:M7` holds real Drive image ID, URL, draft status and voice status; `Story` tab records next approval gate.
 - More details: [Visual Style Guide](VISUAL_STYLE_GUIDE.md), [Voice Guide](VOICE_GUIDE.md), [Visual QA Log](QA_VISUAL_ASSETS_20261122.md), [Image Manifest](../assets/STORY-EN-001_visual_draft_manifest_v1.json).
 - All scene-image drafts **unapproved**; no v2 render started. Supabase and API-based worker integration remain NOT IMPLEMENTED.
+
+## 14. Visual Animatic V2 test (22 พ.ย. 2569)
+- Rendered an actual silent 50s 9:16 video using six previously uploaded scene stills, Ken Burns/Pan-Zoom, brief fairy lights and original English onscreen captions.
+- Uploaded MP4 file ID `1p3uyTiY4SuLiP4IAohp0WOYbuO30cHwM`: https://drive.google.com/file/d/1p3uyTiY4SuLiP4IAohp0WOYbuO30cHwM/view?usp=drivesdk
+- Technical evidence: 720x1280 H.264 / 20 fps / 50 sec / 4,277,209 bytes; no audio stream. Human scene review still PENDING.
+- Draft folder: https://drive.google.com/drive/folders/1Gh7kvNn1xEQHIPOvkDEwGzeocZPLBD-s (MP4, contact sheet, timed SRT, local renderer copy).
+- The renderer is in `tools/render_visual_animatic.py`; storyboard/voice direction and truthful status synced to Google Sheets `Story!A24:B31` and `Scenes!N1:O7`.
+- **Do not interpret the silent animatic as a final narrated motion-graphics MP4**. No natural TTS service selected/connected; voice clips not produced and no editorial visual approval recorded.
+- References: [QA report](ANIMATIC_V2_QA_20261122.md), [voice production brief](VOICE_PRODUCTION_REQUEST_STORY-EN-001.md), [animatic manifest](../assets/STORY-EN-001_animatic_v2_manifest.json).
