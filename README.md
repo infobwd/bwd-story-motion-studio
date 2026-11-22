@@ -5,7 +5,7 @@
 
 ระบบในแผน: สร้างคลิปสั้นเล่าเรื่องด้วยตัวละครประจำจากบท Google Sheets → แยก Storyboard เป็นฉาก → เข้าคิว Supabase → เรนเดอร์ด้วย Worker ภายนอก → ตรวจ QA → อัปโหลด Google Drive → เปิดดูและติดตามผ่าน GitHub Pages
 
-> **Current status: Pilot v1 NeedsRevision; 6 scene-image drafts uploaded; human visual and voice QA pending.** มีคลิปทดสอบ v1 ใน Drive และภาพร่าง v2 ครบ 6 ฉาก แต่ยังไม่มี production worker, Supabase queue หรือ GitHub Pages
+> **Current status: Silent Visual Animatic V2 uploaded; human visual QA pending; voice not generated.** คลิป V1 ยัง NeedsRevision; มีภาพร่าง 6 ฉากและวิดีโอทดสอบแบบไม่มีเสียง V2 ใน Drive แต่ยังไม่มี production worker, Supabase queue หรือ GitHub Pages
 
 ## เอกสารที่ควรอ่าน
 - [Master Plan / Architecture](docs/MASTER_PLAN.md)
@@ -40,10 +40,12 @@ Actions บน Standard runners สำหรับ Public Repo ฟรีใน�
 - [Storage config](config/drive-storage.json), [Original story snapshot](stories/STORY-EN-001.json)
 - **[ภาพร่าง 6 ฉาก (PNG)](https://drive.google.com/drive/folders/1Des_VC-5FYDMLPXcN9tRESIQRRBX8b_k)** — อัปโหลดครบและตรวจขนาด/รายการไฟล์แล้ว รออนุมัติภาพ
 - [Visual manifest](assets/STORY-EN-001_visual_draft_manifest_v1.json) · [Visual Style Guide](docs/VISUAL_STYLE_GUIDE.md) · [Voice Direction](docs/VOICE_GUIDE.md) · [Visual QA log](docs/QA_VISUAL_ASSETS_20261122.md)
-- สถานะ: **Pilot v1 NeedsRevision** (เสียงและภาพยังไม่ผ่าน Human QA), รอ VisualApproval และการเปลี่ยนเสียงพากย์ก่อนเรนเดอร์ v2
+- [Visual Animatic V2 (ไม่มีเสียง)](https://drive.google.com/file/d/1p3uyTiY4SuLiP4IAohp0WOYbuO30cHwM/view?usp=drivesdk) · [ภาพรวม 6 ฉาก](https://drive.google.com/file/d/1ESOLGiZHNzgxJ0LnN4V0FsHVDuFTWvj4/view?usp=drivesdk) · [SRT draft](https://drive.google.com/file/d/160zZMR1toRimzjAtXJOKoLBtt2yesxE_/view?usp=drivesdk)
+- [Animatic renderer source](tools/render_visual_animatic.py) · [V2 QA](docs/ANIMATIC_V2_QA_20261122.md) · [Voice production brief](docs/VOICE_PRODUCTION_REQUEST_STORY-EN-001.md)
+- สถานะ: **Pilot v1 NeedsRevision; V2 เป็นภาพเคลื่อนไหวและคำบรรยายแบบ Silent Draft เท่านั้น** รอ VisualApproval และบริการเสียงพากย์คุณภาพดี ก่อนทำ MP4 final
 
 ## ขั้นต่อไป
-ตรวจรับภาพ 6 ฉากเป็นรายฉากใน Google Sheets → ทดสอบเสียงพากย์ภาษาอังกฤษคุณภาพดี → อนุมัติ Voice → ทำ Motion/MP4 v2 → ตรวจ QA และอัปโหลด Drive; งานโครงสร้าง Supabase/worker ยังแยกเป็นแผนพัฒนาถัดไป
+ตรวจรับภาพและ Visual Animatic V2 เป็นรายฉาก → เชื่อม/บันทึกเสียงพากย์ภาษาอังกฤษที่ใช้งานได้จริง → QA เสียงและคำบรรยาย → จัดทำตัวละครเคลื่อนไหวและ MP4 ฉบับสมบูรณ์ → ตรวจ QA/อัปโหลด Drive; ระบบ Supabase/worker อัตโนมัติยังไม่ดำเนินการ
 
 ## ความปลอดภัย
 Repository เป็น Public: **ห้าม commit credentials, tokens, ข้อมูลนักเรียนหรือบทลับ**. Secrets จัดเก็บบน backend; frontend ใช้ Supabase publishable key และ RLS เท่านั้น
