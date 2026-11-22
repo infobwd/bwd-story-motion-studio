@@ -1,4 +1,4 @@
-# Implementation Roadmap & QA — v1.1
+# Implementation Roadmap & QA — v1.2
 Updated: 2026-11-22 | One manually produced pilot and six new scene-image drafts; production automation not built
 
 ## Roadmap
@@ -71,3 +71,11 @@ Mobile bottom nav & bottom sheet, responsive 9:16 preview, PWA, safe-area and pu
 - Six PNG draft scene images uploaded to Drive. Technical files/IDs verified; human visual review **pending**.
 - Scene file refs and statuses recorded in Google Sheet `Scenes!H1:M7`.
 - Do not mark v2 rendered, approved or delivered. See [Visual QA Log](QA_VISUAL_ASSETS_20261122.md).
+
+## P1 progress 2026-11-22 (evidence)
+- 6 image drafts in Google Drive, still unapproved.
+- Silent visual animatic V2 (50s) uploaded with contact sheet and scene-level SRT. Technical render QA passes, but character rigging, natural voice and final QA remain incomplete.
+- Source code: `tools/render_visual_animatic.py`; the visual prototype is not production automation.
+- Blocker for better audio: no connected/authorized high-quality TTS service or recorded narration; old eSpeak voice explicitly rejected.
+- Explicit approval gate remains: image review → voice selection/sample and QA → full-motion draft → final QA → Drive delivery.
+- [Detailed V2 QA](ANIMATIC_V2_QA_20261122.md).
