@@ -5,7 +5,7 @@
 
 ระบบในแผน: สร้างคลิปสั้นเล่าเรื่องด้วยตัวละครประจำจากบท Google Sheets → แยก Storyboard เป็นฉาก → เข้าคิว Supabase → เรนเดอร์ด้วย Worker ภายนอก → ตรวจ QA → อัปโหลด Google Drive → เปิดดูและติดตามผ่าน GitHub Pages
 
-> **Current status: Pilot uploaded / human QA pending.** ผลิตคลิปทดสอบจริงและอัปโหลด Google Drive ได้แล้วโดยใช้เครื่องเรนเดอร์เฉพาะกิจ ยังไม่มีระบบ Queue/Supabase, GitHub Pages หรือ Worker แบบอัตโนมัติ
+> **Current status: Pilot v1 NeedsRevision; 6 scene-image drafts uploaded; human visual and voice QA pending.** มีคลิปทดสอบ v1 ใน Drive และภาพร่าง v2 ครบ 6 ฉาก แต่ยังไม่มี production worker, Supabase queue หรือ GitHub Pages
 
 ## เอกสารที่ควรอ่าน
 - [Master Plan / Architecture](docs/MASTER_PLAN.md)
@@ -38,10 +38,12 @@ Actions บน Standard runners สำหรับ Public Repo ฟรีใน�
 - [โฟลเดอร์จัดเก็บไฟล์](https://drive.google.com/drive/folders/1Cpb4Epc8iAmplFx8yVu1bwyRkpAlnLLl)
 - [บันทึก QA และรายละเอียดไฟล์](docs/PILOT_TEST_LOG_20261122.md)
 - [Storage config](config/drive-storage.json), [Original story snapshot](stories/STORY-EN-001.json)
-- สถานะ: **อัปโหลดและ technical QA ผ่าน / รอ human QA** ไม่ใช่ระบบผลิตอัตโนมัติและยังไม่ได้เปิดเผยแพร่เป็นสื่อฉบับสมบูรณ์
+- **[ภาพร่าง 6 ฉาก (PNG)](https://drive.google.com/drive/folders/1Des_VC-5FYDMLPXcN9tRESIQRRBX8b_k)** — อัปโหลดครบและตรวจขนาด/รายการไฟล์แล้ว รออนุมัติภาพ
+- [Visual manifest](assets/STORY-EN-001_visual_draft_manifest_v1.json) · [Visual Style Guide](docs/VISUAL_STYLE_GUIDE.md) · [Voice Direction](docs/VOICE_GUIDE.md) · [Visual QA log](docs/QA_VISUAL_ASSETS_20261122.md)
+- สถานะ: **Pilot v1 NeedsRevision** (เสียงและภาพยังไม่ผ่าน Human QA), รอ VisualApproval และการเปลี่ยนเสียงพากย์ก่อนเรนเดอร์ v2
 
 ## ขั้นต่อไป
-กำหนดโปรเจกต์ Supabase และเชื่อม Secure Rendering Worker; ปรับเสียงพากย์ภาษาอังกฤษให้เหมาะกับผู้เรียนและเปิดขั้นตอนตรวจรับก่อนเผยแพร่
+ตรวจรับภาพ 6 ฉากเป็นรายฉากใน Google Sheets → ทดสอบเสียงพากย์ภาษาอังกฤษคุณภาพดี → อนุมัติ Voice → ทำ Motion/MP4 v2 → ตรวจ QA และอัปโหลด Drive; งานโครงสร้าง Supabase/worker ยังแยกเป็นแผนพัฒนาถัดไป
 
 ## ความปลอดภัย
 Repository เป็น Public: **ห้าม commit credentials, tokens, ข้อมูลนักเรียนหรือบทลับ**. Secrets จัดเก็บบน backend; frontend ใช้ Supabase publishable key และ RLS เท่านั้น
