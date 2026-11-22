@@ -67,8 +67,18 @@
     "fps": 12,
     "duration_seconds": 50,
     "technical_qa": "pass",
-    "human_qa": "pending",
+    "human_qa": "needs_revision_voice_visual",
     "publish_approved": false
   },
-  "note": "Pilot made offline with vector shapes and synthetic English TTS. Not processed by production worker/Supabase."
+  "note": "Pilot made offline with vector shapes and synthetic English TTS. Not processed by production worker/Supabase.",
+  "pilot_v1_status": "needs_revision_user_feedback_visual_voice",
+  "visual_draft": {
+    "manifest_path": "assets/STORY-EN-001_visual_draft_manifest_v1.json",
+    "folder_id": "1Des_VC-5FYDMLPXcN9tRESIQRRBX8b_k",
+    "scene_count": 6,
+    "visual_revision": "v1",
+    "approval_status": "draft_awaiting_human_review"
+  },
+  "voice_status": "needs_revision_existing_voice_not_approved",
+  "v2_render_status": "not_started"
 }
