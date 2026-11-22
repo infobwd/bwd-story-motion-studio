@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "provider": "google_drive",
   "root_folder_id": "1mptg083MKUgLguzbsmWlhMqTW7BdrwNY",
   "root_folder_name": "2569",
@@ -27,5 +27,19 @@
     "technical_qa": "passed",
     "editorial_qa": "pending",
     "sound": "none"
+  },
+  "scene_images_approved": {
+    "folder_id": "18nLmhtYKEAmYiwmSr19PCE4ESM8uo7dJ",
+    "folder_url": "https://drive.google.com/drive/folders/18nLmhtYKEAmYiwmSr19PCE4ESM8uo7dJ",
+    "count": 6,
+    "source": "user approval 2026-11-22",
+    "manifest": "assets/STORY-EN-001_visual_approved_manifest_v1.json"
+  },
+  "voice_preproduction": {
+    "folder_id": "122SYWkyqHgXSe6-aFD8XYyBJbGDSv2rb",
+    "folder_url": "https://drive.google.com/drive/folders/122SYWkyqHgXSe6-aFD8XYyBJbGDSv2rb",
+    "draft_engine": "Kokoro-82M",
+    "setup_status": "not_installed",
+    "audio_files": "none"
   }
 }
