@@ -1,4 +1,4 @@
-# BWD Story Motion Studio — Master Plan v1.3
+# BWD Story Motion Studio — Master Plan v1.4
 วันที่: 22 พฤศจิกายน 2569 | สถานะ: ImageApproved 6/6 / silent animatic V2 uploaded / voice generation pending / production automation not built
 Project: **BWD Story Motion Studio — AI Video Production**
 Repository: https://github.com/infobwd/bwd-story-motion-studio
@@ -119,3 +119,10 @@ Draft → StoryboardReady → ScriptApproved → Queued → Claimed → AssetsRe
 - Zero-paid-API option selected for evaluation: Kokoro-82M + kokoro-onnx local inference, no subscription. Azure Speech F0 (500k neural TTS characters/month free quota) is optional fallback needing account setup and eligibility checks.
 - Prepared `tools/generate_voice_kokoro.py`, validated local dry run and sample sheet-export JSON; real model/voice files unavailable in current session, no new audio produced and no final v2.
 - Decision and precise instructions: [FREE_TTS_DECISION_20261122.md](FREE_TTS_DECISION_20261122.md), [Approved manifest](../assets/STORY-EN-001_visual_approved_manifest_v1.json).
+
+## 16. Cloud TTS direction — 2026-11-22
+- User explicitly does not want to run any school computer for audio production. Stop advancing Kokoro local as the primary route.
+- Evaluation route: Gemini Cloud TTS Free Tier in Google AI Studio for English S01; verify model and account quota, never activate paid tier without approval.
+- Live S01 narration verified from Sheet, prompt and no-key-safe test harness committed to repo and copied to Drive.
+- `python -m py_compile` PASS and `--dry-run` PASS; no real Gemini request sent because Google AI Studio sign-in/API key are not available via current tools. **Voice files 0, VoiceApproved=false**.
+- Account ownership/Google AI Studio authorization must be completed securely before any live audio generation. [Trial evidence](GEMINI_TTS_SCENE01_TRIAL_20261122.md).
