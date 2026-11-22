@@ -5,7 +5,7 @@
 
 ระบบในแผน: สร้างคลิปสั้นเล่าเรื่องด้วยตัวละครประจำจากบท Google Sheets → แยก Storyboard เป็นฉาก → เข้าคิว Supabase → เรนเดอร์ด้วย Worker ภายนอก → ตรวจ QA → อัปโหลด Google Drive → เปิดดูและติดตามผ่าน GitHub Pages
 
-> **Current status: Planning only.** ยังไม่มีระบบเว็บหรือ Worker ที่ผลิตวิดีโอสำเร็จจริง; Repository เริ่มต้นสำหรับจัดเก็บแผนและพัฒนาต่อ
+> **Current status: Pilot uploaded / human QA pending.** ผลิตคลิปทดสอบจริงและอัปโหลด Google Drive ได้แล้วโดยใช้เครื่องเรนเดอร์เฉพาะกิจ ยังไม่มีระบบ Queue/Supabase, GitHub Pages หรือ Worker แบบอัตโนมัติ
 
 ## เอกสารที่ควรอ่าน
 - [Master Plan / Architecture](docs/MASTER_PLAN.md)
@@ -32,8 +32,16 @@
 ### คำเตือนเรื่อง GitHub Actions
 Actions บน Standard runners สำหรับ Public Repo ฟรีในแง่ billable minutes แต่ **ไม่ควรใช้เป็นบริการผลิตวิดีโอต่อเนื่อง** ตามข้อจำกัด GitHub Terms สำหรับ hosted runners ใช้ Actions สำหรับ build/test/deploy ซอฟต์แวร์แทน รายละเอียด [เอกสารนโยบายและต้นทุน](docs/GITHUB_ACTIONS_COST_AND_POLICY.md)
 
+## คลิปทดสอบ STORY-EN-001 (22 พฤศจิกายน 2569)
+- [ดูวิดีโอ MP4 บน Google Drive](https://drive.google.com/file/d/15bLE8DvnoV17hmL1Z7AYDFWAU950cOVN/view?usp=drivesdk)
+- [บทและ Storyboard บน Google Sheets](https://docs.google.com/spreadsheets/d/1FwQK1zftNFEI0gIX7V-Pfwo6Dl9JSHld0IXnExC69do/edit?usp=drivesdk)
+- [โฟลเดอร์จัดเก็บไฟล์](https://drive.google.com/drive/folders/1Cpb4Epc8iAmplFx8yVu1bwyRkpAlnLLl)
+- [บันทึก QA และรายละเอียดไฟล์](docs/PILOT_TEST_LOG_20261122.md)
+- [Storage config](config/drive-storage.json), [Original story snapshot](stories/STORY-EN-001.json)
+- สถานะ: **อัปโหลดและ technical QA ผ่าน / รอ human QA** ไม่ใช่ระบบผลิตอัตโนมัติและยังไม่ได้เปิดเผยแพร่เป็นสื่อฉบับสมบูรณ์
+
 ## ขั้นต่อไป
-เริ่ม P0 ยืนยัน Spreadsheet ID, Supabase project, Drive folder, Worker location และค่าใช้จ่าย ก่อนลงมือเขียนระบบจริง
+กำหนดโปรเจกต์ Supabase และเชื่อม Secure Rendering Worker; ปรับเสียงพากย์ภาษาอังกฤษให้เหมาะกับผู้เรียนและเปิดขั้นตอนตรวจรับก่อนเผยแพร่
 
 ## ความปลอดภัย
 Repository เป็น Public: **ห้าม commit credentials, tokens, ข้อมูลนักเรียนหรือบทลับ**. Secrets จัดเก็บบน backend; frontend ใช้ Supabase publishable key และ RLS เท่านั้น
