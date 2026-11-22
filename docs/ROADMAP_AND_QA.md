@@ -1,5 +1,5 @@
 # Implementation Roadmap & QA — v1.5
-Updated: 2026-11-22 | One manually produced pilot and six new scene-image drafts; production automation not built
+Updated: 2026-11-22 | ImageApproved 6/6; one silent animatic; VoiceQueue S01 staged PendingSetup; Apps Script worker not deployed
 
 ## Roadmap
 | Phase | งาน | ผลลัพธ์/หลักฐาน | Gate |
