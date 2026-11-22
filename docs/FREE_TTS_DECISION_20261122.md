@@ -2,12 +2,17 @@
 Date checked: 2026-11-22 · Story: STORY-EN-001 · Purpose: English story narration (Thai primary pupils, 6 scenes, total 50 sec).
 
 ## Decision (design selected, not installed)
-**Primary for no paid API charges: [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) + [kokoro-onnx](https://github.com/thewh1teagle/kokoro-onnx).**
+**Previously selected local option (now superseded for current user preference): [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) + [kokoro-onnx](https://github.com/thewh1teagle/kokoro-onnx).**
 - Kokoro model license Apache-2.0; Python ONNX wrapper MIT; verify exact bundled voice packs before publication.
 - Runs offline on a school Windows/Linux/Mac computer with CPU; no cloud account or per-character subscription. Hardware/electricity and installation effort are not zero.
 - English narration voice candidate `af_sarah` (or `af_heart`) at speed ~1.0; final voice requires human listening for clarity and safe punctuation.
 - Once installed, generate 6 local WAV drafts, one per scene; then optionally upload approved WAV files to Drive, use FFmpeg to composite with existing silent animatic.
 - This choice does NOT create an authorized production worker or an active automation. Do not attempt continuous production via GitHub Actions.
+
+## Current cloud-first direction (2026-11-22)
+- User does **not** want any school computer for TTS. Primary current evaluation is Gemini Cloud TTS Free Tier via Google AI Studio, one S01 voice sample first.
+- Dry-run only; no Google AI Studio authorized session/API key yet, so no sound generated. Do not treat an available Free Tier as an active account connection.
+- [Evidence and instructions](GEMINI_TTS_SCENE01_TRIAL_20261122.md).
 
 ## Cloud fallback (free quota, needs account)
 **[Azure Speech F0](https://azure.microsoft.com/en-us/pricing/details/speech/):** official page lists 0.5 million standard prebuilt Neural TTS characters/month free. Requires an Azure account, F0 resource creation, appropriate region availability and service authentication; verify any card/billing/subscription requirement before activation. This is a quota, not an unlimited free plan, and no Azure Speech credential is connected here.
