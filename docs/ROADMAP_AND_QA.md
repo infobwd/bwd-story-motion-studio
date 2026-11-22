@@ -1,11 +1,11 @@
-# Implementation Roadmap & QA — v1.0
-Updated: 2026-11-22 | Planning only — implementation not started
+# Implementation Roadmap & QA — v1.1
+Updated: 2026-11-22 | One manually produced pilot and six new scene-image drafts; production automation not built
 
 ## Roadmap
 | Phase | งาน | ผลลัพธ์/หลักฐาน | Gate |
 |---|---|---|---|
 | P0 Foundation | ยืนยันบัญชี Google Sheets / Drive destination folder / Supabase project ref / Google OAuth/Service Account consent / renderer choice / TTS licence / budgets | `docs/decisions/` และ `.env.example` ไม่มี secret | เจ้าของระบบยืนยันตัวตน สิทธิ์ และต้นทุน |
-| P1 Story + Motion Demo | story & scene schema, character manifest 1 ตัว, motion presets 3 รูปแบบ, 9:16 sample, Thai subtitles, FFmpeg local render | playable sample MP4 locally, screenshots, render log | ทุกฉากต่อเนื่อง อ่านไทยถูกต้อง |
+| P1 Story + Motion Demo | storyboard 6 ฉาก, PNG scene illustrations, character continuity QA, approved visuals and improved licensed English narration; trial animation + MP4 | 6 scene images uploaded; next: human QA, voice sample and motion test | VisualApproved + VoiceApproved ก่อน render v2 |
 | P2 Backend Production | Supabase Auth, RLS, stories/jobs/assets/QA tables, atomic claim, retry, worker + Drive upload; log status + checksum | migration SQL, integration test, validated Drive file ID | end-to-end 1 job ผ่านโดยไม่ต้องแก้ DB ด้วยมือ |
 | P3 Dashboard | GitHub Pages SPA/PWA, responsive dashboard, queue filters, story editor/preview, QA approve/reject, inline video viewer | Pages URL, mobile QA screenshots, role tests | ครู/ผู้ตรวจเข้าถึงตามสิทธิ์ |
 | P4 ChatGPT + Advanced AI | command interface, optional service-specific APIs, generated scene handling, metrics cost reporting | E2E from chat → queued, real audit events | ไม่มี hallucinated completion; cost cap ใช้ได้ |
@@ -65,3 +65,9 @@ Mobile bottom nav & bottom sheet, responsive 9:16 preview, PWA, safe-area and pu
 - [Master Plan](MASTER_PLAN.md)
 - [ChatGPT Project Instructions](PROJECT_INSTRUCTIONS_V1.md)
 - [GitHub Actions policy](GITHUB_ACTIONS_COST_AND_POLICY.md)
+
+## Actual pilot 2026-11-22
+- Pilot v1 MP4 technically valid and in Drive, but human feedback marked visuals and synthetic voice **NeedsRevision**.
+- Six PNG draft scene images uploaded to Drive. Technical files/IDs verified; human visual review **pending**.
+- Scene file refs and statuses recorded in Google Sheet `Scenes!H1:M7`.
+- Do not mark v2 rendered, approved or delivered. See [Visual QA Log](QA_VISUAL_ASSETS_20261122.md).
