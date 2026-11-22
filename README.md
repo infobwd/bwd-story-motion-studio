@@ -9,7 +9,7 @@
 
 ## เอกสารที่ควรอ่าน
 - [Master Plan / Architecture](docs/MASTER_PLAN.md)
-- [ChatGPT Project Instructions v1.0 (ไม่เกิน 8,000 ตัวอักษร)](docs/PROJECT_INSTRUCTIONS_V1.md)
+- [ChatGPT Project Instructions v1.5 (ไม่เกิน 8,000 ตัวอักษร)](docs/PROJECT_INSTRUCTIONS_V1.md)
 - [Implementation Roadmap & QA](docs/ROADMAP_AND_QA.md)
 - [GitHub Actions Quota, Cost & Policy](docs/GITHUB_ACTIONS_COST_AND_POLICY.md)
 
@@ -38,7 +38,7 @@ Actions บน Standard runners สำหรับ Public Repo ฟรีใน�
 - [โฟลเดอร์จัดเก็บไฟล์](https://drive.google.com/drive/folders/1Cpb4Epc8iAmplFx8yVu1bwyRkpAlnLLl)
 - [บันทึก QA และรายละเอียดไฟล์](docs/PILOT_TEST_LOG_20261122.md)
 - [Storage config](config/drive-storage.json), [Original story snapshot](stories/STORY-EN-001.json)
-- **[ภาพร่าง 6 ฉาก (PNG)](https://drive.google.com/drive/folders/1Des_VC-5FYDMLPXcN9tRESIQRRBX8b_k)** — อัปโหลดครบและตรวจขนาด/รายการไฟล์แล้ว รออนุมัติภาพ
+- **[ภาพร่าง 6 ฉาก (PNG)](https://drive.google.com/drive/folders/1Des_VC-5FYDMLPXcN9tRESIQRRBX8b_k)** — เก็บเป็นประวัติ; ผู้ใช้อนุมัติภาพแล้วและมีสำเนาในโฟลเดอร์ Approved
 - [Visual manifest](assets/STORY-EN-001_visual_draft_manifest_v1.json) · [Visual Style Guide](docs/VISUAL_STYLE_GUIDE.md) · [Voice Direction](docs/VOICE_GUIDE.md) · [Visual QA log](docs/QA_VISUAL_ASSETS_20261122.md)
 - [Visual Animatic V2 (ไม่มีเสียง)](https://drive.google.com/file/d/1p3uyTiY4SuLiP4IAohp0WOYbuO30cHwM/view?usp=drivesdk) · [ภาพรวม 6 ฉาก](https://drive.google.com/file/d/1ESOLGiZHNzgxJ0LnN4V0FsHVDuFTWvj4/view?usp=drivesdk) · [SRT draft](https://drive.google.com/file/d/160zZMR1toRimzjAtXJOKoLBtt2yesxE_/view?usp=drivesdk)
 - [Animatic renderer source](tools/render_visual_animatic.py) · [V2 QA](docs/ANIMATIC_V2_QA_20261122.md) · [Voice production brief](docs/VOICE_PRODUCTION_REQUEST_STORY-EN-001.md)
@@ -70,3 +70,5 @@ Repository เป็น Public: **ห้าม commit credentials, tokens, ข�
 - [โฟลเดอร์ติดตั้งใน Drive](https://drive.google.com/drive/folders/16R01HlPdMe_gprIux84Qe2Cw7EVM4Q0D)
 - ข้อจำกัด: **ยังไม่สามารถสร้างโปรเจกต์ Apps Script และอนุญาต OAuth แทนเจ้าของบัญชีผ่านเครื่องมือที่เชื่อมในแชทนี้** จึงยังไม่มี trigger หรือเสียงที่ผลิตผ่าน worker จริง และห้ามอ้างว่าระบบอัตโนมัติใช้งานได้แล้ว
 - ไม่ใช้คอมพิวเตอร์โรงเรียน; หลังติดตั้งครั้งแรก ChatGPT ส่งคิวผ่าน Sheets, Apps Script polling ทุก 5 นาที, Gemini Free Tier สร้างเสียง (ถ้าโครงการไม่มี Billing), เก็บ WAV ลง Drive และรอตรวจเสียง
+
+- ติดตามการอนุญาต Google Apps Script ครั้งแรกได้ที่ [GitHub Issue #1](https://github.com/infobwd/bwd-story-motion-studio/issues/1).
