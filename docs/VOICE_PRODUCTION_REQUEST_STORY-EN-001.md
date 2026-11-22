@@ -16,3 +16,6 @@ Status 2026-11-22: **Production-ready brief; voice NOT generated or approved.**
 
 ## Blocker
 Free design selected 2026-11-22: **local Kokoro-82M + kokoro-onnx** (Apache-2.0/MIT); prepare CPU worker on school machine; no paid API required. See [free TTS decision](FREE_TTS_DECISION_20261122.md) and [draft-voice CLI](../tools/generate_voice_kokoro.py). Dry-run passed but no model installed in current environment, so no audio created. Azure Speech F0 is fallback with free monthly quota, but requires account/service setup and a budget guard. Earlier `eSpeak` voice rejected; never reuse. Need human voice QA before composition.
+
+## 2026-11-22 Cloud-first update
+User rejected school-computer requirement. A Gemini Cloud TTS S01 evaluation package is prepared; Google AI Studio free tier exists but is not authorized in the current connected environment. No paid service, API call, or voice artifact generated. Follow [S01 Gemini trial log](GEMINI_TTS_SCENE01_TRIAL_20261122.md) and do not mark `VoiceApproved`.
