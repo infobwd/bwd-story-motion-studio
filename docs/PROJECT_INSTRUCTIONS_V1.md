@@ -1,4 +1,4 @@
-# ChatGPT Project Instructions v1.4 — BWD Story Motion Studio
+# ChatGPT Project Instructions v1.5 — BWD Story Motion Studio
 Updated: 2026-11-22 | Copy เฉพาะข้อความใต้เส้นคั่นไปใช้ใน ChatGPT Project Instructions (ไม่เกิน 8,000 ตัวอักษร)
 
 ---
@@ -9,7 +9,7 @@ Updated: 2026-11-22 | Copy เฉพาะข้อความใต้เส�
 - Repo หลัก: https://github.com/infobwd/bwd-story-motion-studio (branch main)
 - ก่อนทำงานใหม่ให้อ่าน README.md และ docs/MASTER_PLAN.md, docs/ROADMAP_AND_QA.md, docs/GITHUB_ACTIONS_COST_AND_POLICY.md รวมถึงไฟล์/Issue ที่เกี่ยวข้องใน Repo โดยใช้ข้อมูลสด ไม่อาศัยความจำแทนหลักฐาน
 - หากคำสั่งสั้นนี้ไม่ครอบคลุม ให้ใช้เอกสารใน Repo เป็นหลัก และบันทึกการเปลี่ยนแปลงสำคัญกลับเข้า Repo พร้อมเวอร์ชัน
-- STORY-EN-001: ภาพนิ่งอนุมัติแล้ว 6/6, Visual Animatic V2 ไม่มีเสียง 50 วินาที เทคนิคผ่าน ผู้ใช้ไม่ต้องการใช้เครื่องคอมพิวเตอร์โรงเรียน จึงทดลอง **Gemini Cloud TTS Free Tier** แทน Kokoro local; S01 dry-run ผ่านแต่ยังไม่มี Google AI Studio auth/API key จึงยัง **ไม่มีไฟล์เสียงจริง** หรือ MP4 final อ่าน docs/GEMINI_TTS_SCENE01_TRIAL_20261122.md, docs/FREE_TTS_DECISION_20261122.md และ approved image manifest ก่อนทำงาน ห้ามรายงานว่าผลิตสำเร็จหรือเปิด Paid Tier โดยไม่ได้รับอนุญาต
+- STORY-EN-001: ภาพนิ่งอนุมัติ 6/6, Silent Animatic V2 มีใน Drive; สร้างชีต VoiceQueue/VoiceEvents และตั้ง S01 PendingSetup แล้ว โค้ด Apps Script Gemini TTS Free Tier กับ Mock Tests 11/11 ผ่าน **แต่ยังไม่ได้ติดตั้ง Apps Script/อนุญาต OAuth/API Key และไม่มี WAV จริง** อ่าน docs/APPS_SCRIPT_VOICE_WORKER_SETUP.md, docs/APPS_SCRIPT_VOICE_MVP_QA_20261122.md และ approved image manifest ห้ามบอกว่าเสียงหรือระบบอัตโนมัติทำงานจริง ห้ามเปิด Paid Tier
 
 ## 2. เป้าหมายและรูปแบบผลงาน
 - รับบท Google Sheets → Storyboard → อนุมัติบท → สร้างภาพรายฉากลง Drive (Draft) → **อนุมัติภาพแต่ละฉาก** → สร้างเสียงพากย์ที่ดี (Draft) → **Voice QA/อนุมัติ** → เข้าคิว Supabase → Worker ทำ Motion/MP4 → QA → อัปโหลด Google Drive → ตรวจ File ID/URL/สถานะ
@@ -23,9 +23,9 @@ Updated: 2026-11-22 | Copy เฉพาะข้อความใต้เส�
 - GitHub = source, docs, schema, character manifest, assets ที่เผยแพร่ได้, presets, version history
 - Supabase = Auth/RLS, production jobs, queue/state, QA, audit, asset metadata
 - GitHub Pages = PWA/mobile-first dashboard ให้ดูคิว คลิป ผล QA และสั่งแก้ไขตามสิทธิ์
-- Worker ภายนอก = เรนเดอร์และอัปโหลด Drive; ใช้ Motion Canvas (MIT) + FFmpeg เป็นตัวเริ่มต้น ทดลอง Remotion เฉพาะเมื่อยืนยันสิทธิ์ใช้งาน
+- Worker วิดีโอภายนอก = เรนเดอร์ MP4 และอัปโหลด Drive; Motion Canvas (MIT) + FFmpeg เป็นตัวเริ่มต้น ส่วน **เสียงใช้ Google Apps Script + Gemini Cloud TTS แยกจาก Video Worker** หลังติดตั้ง/อนุมัติจริง ทดลอง Remotion เฉพาะเมื่อยืนยันสิทธิ์ใช้งาน
 - Google Drive = ที่เก็บ MP4/thumbnail/deliverables ฉบับจริง ไม่ใช้ GitHub เก็บคลิปขนาดใหญ่
-- ChatGPT connectors ช่วยอ่าน/แก้/สั่งงานในแชทได้ตามสิทธิ์ แต่ระบบผลิตต่อเนื่องต้องมี backend/API/worker จริง ห้ามอ้างว่า connector ทำงานแทน API อัตโนมัติได้
+- ChatGPT connectors ช่วยอ่าน/แก้/เพิ่ม VoiceQueue ใน Google Sheets ได้ตามสิทธิ์ แต่ Apps Script trigger ต้องติดตั้งจริงและมี Google OAuth/API Key ฝั่ง server; connector ทำงานแทน API อัตโนมัติไม่ได้
 
 ## 4. วิธีทำงานเมื่อได้รับคำสั่ง
 1) ตรวจ Repo/Sheets/Supabase/Drive ที่เกี่ยวข้องจริงก่อนตอบ หากไม่มีลิงก์/ID/permission ให้ระบุสิ่งที่ยังขาด ห้ามเดา
