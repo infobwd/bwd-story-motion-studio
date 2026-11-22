@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "story_id": "STORY-EN-001",
+  "script_revision": "v1",
+  "visual_version": "image_draft_v1",
+  "preview_version": "VISUAL_ANIMATIC_V2_DRAFT",
+  "status": "uploaded_technical_qa_pass_human_qa_pending",
+  "render_method": "Local Python/OpenCV + Pillow + FFmpeg; Ken Burns movement and baked English captions; not character animation.",
+  "output": {
+    "drive_file_id": "1p3uyTiY4SuLiP4IAohp0WOYbuO30cHwM",
+    "drive_url": "https://drive.google.com/file/d/1p3uyTiY4SuLiP4IAohp0WOYbuO30cHwM/view?usp=drivesdk",
+    "file_name": "STORY-EN-001_VISUAL_ANIMATIC_v2_DRAFT.mp4",
+    "mime_type": "video/mp4",
+    "bytes": 4277209,
+    "sha256_local": "284bc00af128fed436ad95f5095e7269fdf39df9d525b818b124898d2bcbbdce",
+    "codec": "H.264",
+    "width": 720,
+    "height": 1280,
+    "fps": 20,
+    "duration_seconds": 50,
+    "audio_streams": 0,
+    "technical_qa": "passed_ffprobe_and_drive_file_metadata",
+    "human_qa": "pending",
+    "is_final": false,
+    "delivered": false
+  },
+  "assets": {
+    "image_manifest_path": "assets/STORY-EN-001_visual_draft_manifest_v1.json",
+    "image_count": 6,
+    "contact_sheet_drive_id": "1ESOLGiZHNzgxJ0LnN4V0FsHVDuFTWvj4",
+    "contact_sheet_url": "https://drive.google.com/file/d/1ESOLGiZHNzgxJ0LnN4V0FsHVDuFTWvj4/view?usp=drivesdk",
+    "captions_srt_drive_id": "160zZMR1toRimzjAtXJOKoLBtt2yesxE_",
+    "captions_srt_url": "https://drive.google.com/file/d/160zZMR1toRimzjAtXJOKoLBtt2yesxE_/view?usp=drivesdk",
+    "folder_id": "1Gh7kvNn1xEQHIPOvkDEwGzeocZPLBD-s",
+    "folder_url": "https://drive.google.com/drive/folders/1Gh7kvNn1xEQHIPOvkDEwGzeocZPLBD-s"
+  },
+  "script": {
+    "source": "Google Sheets / Scenes!A1:O7",
+    "spreadsheet_id": "1FwQK1zftNFEI0gIX7V-Pfwo6Dl9JSHld0IXnExC69do",
+    "last_checked": "2026-11-22"
+  },
+  "qa": {
+    "scene_continuity": "pending_human",
+    "voice": "not_generated",
+    "captions": "scene_level_not_word_aligned",
+    "copyright": "no_music_added",
+    "drive_external_access": "not_verified",
+    "approval_required": true
+  },
+  "source_renderer": "tools/render_visual_animatic.py",
+  "note": "A silent preview only. Requires image approval, recorded/AI English narration with documented rights, character motion layers, full QA and final render before delivery."
+}
