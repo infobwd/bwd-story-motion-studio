@@ -1,4 +1,4 @@
-# Implementation Roadmap & QA — v1.3
+# Implementation Roadmap & QA — v1.4
 Updated: 2026-11-22 | One manually produced pilot and six new scene-image drafts; production automation not built
 
 ## Roadmap
@@ -85,3 +85,9 @@ Mobile bottom nav & bottom sheet, responsive 9:16 preview, PWA, safe-area and pu
 - ImageApproved ≠ VoiceApproved or Final QA; the 50-second silent animatic remains a technical preview only.
 - Free local Kokoro TTS integration prepared and dry-run tested, actual voice inference not yet attempted due to missing model/runtime on executing host; see [decision](FREE_TTS_DECISION_20261122.md).
 - Required next: run local ONNX model on permitted worker → six WAV drafts → human audio QA → time-aligned captions/MP4 final → human approval + Drive verification.
+
+## 2026-11-22: Cloud TTS experiment (user declined computer worker)
+- Evaluate Gemini Free Tier TTS as primary for voice, Azure Speech F0 fallback subject to cloud-account eligibility; Kokoro local remains optional only.
+- S01 prompt and secure API sample prepared and dry-run tested; verified no API key. Real voice not produced (authorization required).
+- Next gate: sign in Gemini AI Studio/authorize project (no paid upgrade) → one S01 voice test → human listening & timing QA → six scene audio drafts.
+- [Gemini S01 trial log](GEMINI_TTS_SCENE01_TRIAL_20261122.md).
