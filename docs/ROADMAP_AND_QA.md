@@ -1,4 +1,4 @@
-# Implementation Roadmap & QA — v1.2
+# Implementation Roadmap & QA — v1.3
 Updated: 2026-11-22 | One manually produced pilot and six new scene-image drafts; production automation not built
 
 ## Roadmap
@@ -79,3 +79,9 @@ Mobile bottom nav & bottom sheet, responsive 9:16 preview, PWA, safe-area and pu
 - Blocker for better audio: no connected/authorized high-quality TTS service or recorded narration; old eSpeak voice explicitly rejected.
 - Explicit approval gate remains: image review → voice selection/sample and QA → full-motion draft → final QA → Drive delivery.
 - [Detailed V2 QA](ANIMATIC_V2_QA_20261122.md).
+
+## 2026-11-22: Visual QA gate passed, narration pending
+- User approved all six still images and copies were verified in [approved folder](https://drive.google.com/drive/folders/18nLmhtYKEAmYiwmSr19PCE4ESM8uo7dJ).
+- ImageApproved ≠ VoiceApproved or Final QA; the 50-second silent animatic remains a technical preview only.
+- Free local Kokoro TTS integration prepared and dry-run tested, actual voice inference not yet attempted due to missing model/runtime on executing host; see [decision](FREE_TTS_DECISION_20261122.md).
+- Required next: run local ONNX model on permitted worker → six WAV drafts → human audio QA → time-aligned captions/MP4 final → human approval + Drive verification.
