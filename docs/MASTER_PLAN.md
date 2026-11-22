@@ -1,5 +1,5 @@
-# BWD Story Motion Studio — Master Plan v1.2
-วันที่: 22 พฤศจิกายน 2569 | สถานะ: Pilot v1 NeedsRevision / silent animatic V2 uploaded / voice+visual QA pending / production automation not built
+# BWD Story Motion Studio — Master Plan v1.3
+วันที่: 22 พฤศจิกายน 2569 | สถานะ: ImageApproved 6/6 / silent animatic V2 uploaded / voice generation pending / production automation not built
 Project: **BWD Story Motion Studio — AI Video Production**
 Repository: https://github.com/infobwd/bwd-story-motion-studio
 
@@ -111,3 +111,11 @@ Draft → StoryboardReady → ScriptApproved → Queued → Claimed → AssetsRe
 - The renderer is in `tools/render_visual_animatic.py`; storyboard/voice direction and truthful status synced to Google Sheets `Story!A24:B31` and `Scenes!N1:O7`.
 - **Do not interpret the silent animatic as a final narrated motion-graphics MP4**. No natural TTS service selected/connected; voice clips not produced and no editorial visual approval recorded.
 - References: [QA report](ANIMATIC_V2_QA_20261122.md), [voice production brief](VOICE_PRODUCTION_REQUEST_STORY-EN-001.md), [animatic manifest](../assets/STORY-EN-001_animatic_v2_manifest.json).
+
+## 15. User approved still images; free TTS architecture — 2026-11-22
+- User explicitly accepted all six illustrations ("ภาพโอเคแล้ว") as image assets only; approval does NOT imply video visual timing, motion, narration or final QA.
+- Six PNG copies in approved folder: https://drive.google.com/drive/folders/18nLmhtYKEAmYiwmSr19PCE4ESM8uo7dJ, verified 6/6. Original image drafts remain intact.
+- Google Sheet has Approved statuses and links in `Scenes!J2:J7`, `Scenes!P1:Q7`, and `Story!B21`; no VoiceApproved status.
+- Zero-paid-API option selected for evaluation: Kokoro-82M + kokoro-onnx local inference, no subscription. Azure Speech F0 (500k neural TTS characters/month free quota) is optional fallback needing account setup and eligibility checks.
+- Prepared `tools/generate_voice_kokoro.py`, validated local dry run and sample sheet-export JSON; real model/voice files unavailable in current session, no new audio produced and no final v2.
+- Decision and precise instructions: [FREE_TTS_DECISION_20261122.md](FREE_TTS_DECISION_20261122.md), [Approved manifest](../assets/STORY-EN-001_visual_approved_manifest_v1.json).
