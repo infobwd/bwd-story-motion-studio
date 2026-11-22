@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "provider": "google_drive",
+  "root_folder_id": "1mptg083MKUgLguzbsmWlhMqTW7BdrwNY",
+  "root_folder_name": "2569",
+  "output_folder_id": "1Cpb4Epc8iAmplFx8yVu1bwyRkpAlnLLl",
+  "output_folder_name": "STORY-EN-001_Lumi_and_the_Lost_Bunny",
+  "output_folder_url": "https://drive.google.com/drive/folders/1Cpb4Epc8iAmplFx8yVu1bwyRkpAlnLLl",
+  "linked_account": "info@bwd.ac.th",
+  "read_verification": "folder and file readback passed 2026-11-22",
+  "visibility": "access_not_verified",
+  "secrets_note": "Folder IDs are routing metadata, not authorization credentials. Never store OAuth tokens or client secrets in this repo.",
+  "upload_note": "Pilot upload tested using ChatGPT Google Drive connector. Production worker upload credentials and auth not configured yet."
+}
