@@ -67,7 +67,7 @@
     "fps": 12,
     "duration_seconds": 50,
     "technical_qa": "pass",
-    "human_qa": "needs_revision_voice_visual",
+    "human_qa": "still_images_approved_voice_and_final_video_pending",
     "publish_approved": false
   },
   "note": "Pilot made offline with vector shapes and synthetic English TTS. Not processed by production worker/Supabase.",
@@ -77,9 +77,9 @@
     "folder_id": "1Des_VC-5FYDMLPXcN9tRESIQRRBX8b_k",
     "scene_count": 6,
     "visual_revision": "v1",
-    "approval_status": "draft_awaiting_human_review"
+    "approval_status": "approved_by_user_2026-11-22"
   },
-  "voice_status": "needs_new_natural_english_voice_service_and_human_review",
+  "voice_status": "local_kokoro_selected_no_audio_generated",
   "v2_render_status": "visual_animatic_only_final_not_started",
   "visual_animatic_v2": {
     "status": "uploaded_silent_draft_technical_qa_pass",
@@ -94,5 +94,21 @@
     "human_qa": "pending",
     "voice": "not_generated",
     "final": false
+  },
+  "visual_approved": {
+    "status": "image_approved_6_of_6",
+    "date": "2026-11-22",
+    "manifest_path": "assets/STORY-EN-001_visual_approved_manifest_v1.json",
+    "drive_folder_id": "18nLmhtYKEAmYiwmSr19PCE4ESM8uo7dJ",
+    "scope": "still images only"
+  },
+  "voice_candidate": {
+    "engine": "Kokoro-82M",
+    "runtime": "kokoro-onnx",
+    "license": "Apache-2.0 / MIT",
+    "pricing": "zero per-call API fee; offline CPU",
+    "setup_status": "not_installed",
+    "qa": "not_produced",
+    "evaluation": "dry_run_passed_2026-11-22"
   }
 }
