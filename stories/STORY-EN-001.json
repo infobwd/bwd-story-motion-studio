@@ -79,7 +79,7 @@
     "visual_revision": "v1",
     "approval_status": "approved_by_user_2026-11-22"
   },
-  "voice_status": "local_kokoro_selected_no_audio_generated",
+  "voice_status": "cloud_voice_queue_staged_pending_owner_setup",
   "v2_render_status": "visual_animatic_only_final_not_started",
   "visual_animatic_v2": {
     "status": "uploaded_silent_draft_technical_qa_pass",
@@ -110,5 +110,18 @@
     "setup_status": "not_installed",
     "qa": "not_produced",
     "evaluation": "dry_run_passed_2026-11-22"
+  },
+  "voice_queue_pilot": {
+    "status": "PendingSetup",
+    "job_id": "VOICE-STORY-EN-001-S01-5fa460d8",
+    "scene_id": "STORY-EN-001-S01",
+    "idempotency_key": "5fa460d8fa914ec280b1ccbc",
+    "provider": "Google Gemini",
+    "model": "gemini-3.1-flash-tts-preview",
+    "server": "Google Apps Script not yet installed",
+    "template": "apps-script/Code.gs",
+    "test_report": "docs/APPS_SCRIPT_VOICE_MVP_QA_20261122.md",
+    "live_calls": 0,
+    "audio_generated": false
   }
 }
