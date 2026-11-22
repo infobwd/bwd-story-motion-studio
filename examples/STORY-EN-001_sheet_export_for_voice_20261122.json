@@ -1,0 +1,19 @@
+{
+  "story_id": "STORY-EN-001",
+  "script_revision": "v1",
+  "source": {
+    "spreadsheet_id": "1FwQK1zftNFEI0gIX7V-Pfwo6Dl9JSHld0IXnExC69do",
+    "sheet_name": "Scenes",
+    "range": "A2:E7",
+    "snapshot_date": "2026-11-22",
+    "notes": "Validated against the current live Google Sheet; do not treat JSON snapshot as the authority after edits"
+  },
+  "scenes": [
+    {"scene_id":"STORY-EN-001-S01","duration_seconds":8,"narration":"One evening, Lumi the firefly saw a little bunny crying in the forest."},
+    {"scene_id":"STORY-EN-001-S02","duration_seconds":8,"narration":"I am lost, said Ben. I cannot find my way home."},
+    {"scene_id":"STORY-EN-001-S03","duration_seconds":9,"narration":"Lumi smiled. Follow my tiny light. We can find the path together."},
+    {"scene_id":"STORY-EN-001-S04","duration_seconds":8,"narration":"They crossed a stream and walked past the tall trees."},
+    {"scene_id":"STORY-EN-001-S05","duration_seconds":8,"narration":"At last, Ben saw his cozy home. Thank you, Lumi!"},
+    {"scene_id":"STORY-EN-001-S06","duration_seconds":9,"narration":"Even a small light can make a big difference. The end."}
+  ]
+}
