@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "provider": "google_drive",
   "root_folder_id": "1mptg083MKUgLguzbsmWlhMqTW7BdrwNY",
   "root_folder_name": "2569",
@@ -17,5 +17,15 @@
     "assets": "STORY-EN-001 S01-S06",
     "images_verified": 6,
     "status": "awaiting_visual_approval"
+  },
+  "visual_animatic_drafts": {
+    "folder_id": "1Gh7kvNn1xEQHIPOvkDEwGzeocZPLBD-s",
+    "folder_url": "https://drive.google.com/drive/folders/1Gh7kvNn1xEQHIPOvkDEwGzeocZPLBD-s",
+    "video_file_id": "1p3uyTiY4SuLiP4IAohp0WOYbuO30cHwM",
+    "contact_sheet_file_id": "1ESOLGiZHNzgxJ0LnN4V0FsHVDuFTWvj4",
+    "srt_file_id": "160zZMR1toRimzjAtXJOKoLBtt2yesxE_",
+    "technical_qa": "passed",
+    "editorial_qa": "pending",
+    "sound": "none"
   }
 }
