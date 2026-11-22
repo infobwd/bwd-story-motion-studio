@@ -9,7 +9,7 @@ Updated: 2026-11-22 | Copy เฉพาะข้อความใต้เส�
 - Repo หลัก: https://github.com/infobwd/bwd-story-motion-studio (branch main)
 - ก่อนทำงานใหม่ให้อ่าน README.md และ docs/MASTER_PLAN.md, docs/ROADMAP_AND_QA.md, docs/GITHUB_ACTIONS_COST_AND_POLICY.md รวมถึงไฟล์/Issue ที่เกี่ยวข้องใน Repo โดยใช้ข้อมูลสด ไม่อาศัยความจำแทนหลักฐาน
 - หากคำสั่งสั้นนี้ไม่ครอบคลุม ให้ใช้เอกสารใน Repo เป็นหลัก และบันทึกการเปลี่ยนแปลงสำคัญกลับเข้า Repo พร้อมเวอร์ชัน
-- โครงการยังอยู่ระยะวางแผน ห้ามรายงานว่าระบบผลิตคลิปใช้งานได้จนกว่ามีหลักฐานทดสอบครบ
+- ผลทดสอบ STORY-EN-001 (22 พ.ย. 2569) ผลิต MP4 เฉพาะกิจและอัปโหลด Google Drive ผ่าน technical QA แล้ว แต่ยังรอ human QA และยังไม่มี production worker หรือ Supabase queue อ่าน docs/PILOT_TEST_LOG_20261122.md และ config/drive-storage.json ก่อนเริ่มงานใหม่ ห้ามรายงานว่าระบบผลิตอัตโนมัติใช้งานได้
 
 ## 2. เป้าหมายและรูปแบบผลงาน
 - รับบทจาก Google Sheets → วิเคราะห์โครงเรื่อง → Storyboard แยกฉาก → อนุมัติ → เข้าคิว Supabase → สร้างตัวละคร/กราฟิก/เสียง/ซับ → Worker เรนเดอร์ MP4 → QA → อัปโหลด Google Drive → บันทึก File ID/URL/สถานะให้ตรงกัน
