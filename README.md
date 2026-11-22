@@ -5,7 +5,7 @@
 
 ระบบในแผน: สร้างคลิปสั้นเล่าเรื่องด้วยตัวละครประจำจากบท Google Sheets → แยก Storyboard เป็นฉาก → เข้าคิว Supabase → เรนเดอร์ด้วย Worker ภายนอก → ตรวจ QA → อัปโหลด Google Drive → เปิดดูและติดตามผ่าน GitHub Pages
 
-> **Current status: ImageApproved 6/6; Gemini Cloud TTS S01 dry-run passed; account authorization missing; no audio file.** มี Visual Animatic แบบไม่มีเสียง แต่ยังไม่ใช่คลิป final
+> **Current status: Google Sheets VoiceQueue staged / Apps Script source and 11 mock tests completed / NOT DEPLOYED.** ภาพอนุมัติ 6/6 และมี Visual Animatic V2 ไม่มีเสียง; ระบบยังต้องติดตั้ง Google Apps Script และตรวจบัญชี Free Tier
 
 ## เอกสารที่ควรอ่าน
 - [Master Plan / Architecture](docs/MASTER_PLAN.md)
@@ -61,3 +61,12 @@ Actions บน Standard runners สำหรับ Public Repo ฟรีใน�
 
 ## ความปลอดภัย
 Repository เป็น Public: **ห้าม commit credentials, tokens, ข้อมูลนักเรียนหรือบทลับ**. Secrets จัดเก็บบน backend; frontend ใช้ Supabase publishable key และ RLS เท่านั้น
+
+## Voice Queue (Google Apps Script Cloud MVP v0.1.0 — not deployed)
+- **คิวสร้างจริงใน Google Sheets แล้ว:** [Story Sheet → VoiceQueue / VoiceEvents](https://docs.google.com/spreadsheets/d/1FwQK1zftNFEI0gIX7V-Pfwo6Dl9JSHld0IXnExC69do/edit)
+- Job ทดสอบแรก `VOICE-STORY-EN-001-S01-5fa460d8` = **PendingSetup**; ยังไม่ได้ยิง Gemini API หรือสร้าง WAV
+- [Google Apps Script Worker source](apps-script/Code.gs) · [Manifest](apps-script/appsscript.json) · [Mock tests 11/11](tests/queue.test.cjs)
+- [คู่มือติดตั้งครั้งเดียว](docs/APPS_SCRIPT_VOICE_WORKER_SETUP.md) · [ผล QA และ blocker](docs/APPS_SCRIPT_VOICE_MVP_QA_20261122.md)
+- [โฟลเดอร์ติดตั้งใน Drive](https://drive.google.com/drive/folders/16R01HlPdMe_gprIux84Qe2Cw7EVM4Q0D)
+- ข้อจำกัด: **ยังไม่สามารถสร้างโปรเจกต์ Apps Script และอนุญาต OAuth แทนเจ้าของบัญชีผ่านเครื่องมือที่เชื่อมในแชทนี้** จึงยังไม่มี trigger หรือเสียงที่ผลิตผ่าน worker จริง และห้ามอ้างว่าระบบอัตโนมัติใช้งานได้แล้ว
+- ไม่ใช้คอมพิวเตอร์โรงเรียน; หลังติดตั้งครั้งแรก ChatGPT ส่งคิวผ่าน Sheets, Apps Script polling ทุก 5 นาที, Gemini Free Tier สร้างเสียง (ถ้าโครงการไม่มี Billing), เก็บ WAV ลง Drive และรอตรวจเสียง
